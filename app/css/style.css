@@ -1,0 +1,29 @@
+header {
+  height: 100px;
+}
+.head-inner {
+  height: 100px;
+  width: 600px;
+  margin: 0 auto;
+}
+.head-inner__logo {
+  float: left;
+}
+.head-inner__text {
+  display: inline-block;
+  line-height: 100px;
+  height: 100px;
+  font-size: 2em;
+}
+.head-inner__navi {
+  float: right;
+  width: 300px;
+  height: 100%;
+  font-size: 1em;
+}
+.head-inner__cols {
+  vertical-align: middle;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */
