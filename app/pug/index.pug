@@ -9,8 +9,8 @@ head
 body
 	//- БОШКА
 	header
-		div.head-inner 
-			div.head-inner__logo
+		.head-inner 
+			.head-inner__logo
 				span.head-inner__text Bella
 			table.head-inner__navi
 				tr
@@ -19,12 +19,121 @@ body
 					td.head-inner__cols Pricing
 					td.head-inner__cols Contact
 	//- БИЛБОРД!!!
-	div.billboard
-		div.billboard__text
+	.billboard
+		.billboard__text
 			b Bella 
 			span Email Template
-		div.billboard__button
+		.billboard__button
 			span.
 				Get it Now 	&nbsp;&rarr;
-	include include/footer.pug
-	
+	//- Сервисы
+	.servises
+		.servises__table
+			.servises__cells
+				p.servises__text.
+					phoncus ut, imperdiet vel venenatis vitae justo ullam dictum felis eu pede mollis pretium massa.
+				.servises__button.
+					READ MORE &nbsp;&rarr;
+			.servises__cells
+				p.servises__text.
+					phoncus ut, imperdiet vel venenatis vitae justo ullam dictum felis eu pede mollis pretium massa.
+				.servises__button.
+					READ MORE &nbsp;&rarr;
+			.servises__cells
+				p.servises__text.
+					phoncus ut, imperdiet vel venenatis vitae justo ullam dictum felis eu pede mollis pretium massa.
+				.servises__button.
+					READ MORE &nbsp;&rarr;
+	//- Отзывы
+	.testimonials
+		.testimonials__wrap-content
+			p.testimonials__text.
+				Donec quam felis ultricies nec pellentesque pretium quis sem massa quis enim. Donec pede justo fringilla vel aliquet nec vulputate eget magnis montes ligula eget.
+			p.testimonials__icon.
+				Alexander Doe 
+			p.testimonials__icon-text.
+				Senior UX Developer
+		.testimonials__wrap-content
+			span.testimonials__text.
+				Donec quam felis ultricies nec pellentesque pretium quis sem massa quis enim. Donec pede justo fringilla vel aliquet nec vulputate eget magnis montes ligula eget.
+			span.testimonials__icon.
+				Laurie Doe
+			p.testimonials__icon-text.
+				Marketing Exper
+	//- Клиенты
+	.clients
+		img.clients__brand(src="/img/BRAND.png", alt="клиенты" title="клиенты")
+		img.clients__brand(src="img/BRAND.png", alt="клиенты" title="клиенты")
+		img.clients__brand(src="img/BRAND.png", alt="клиенты" title="клиенты")
+		img.clients__brand(src="img/BRAND.png", alt="клиенты" title="клиенты")
+	//- Блог
+	.blog
+		.blog__wrap-content
+			img.blog__picture(src="img/blog1.jpg", alt="картинка")
+			p.blog__text.
+				socis natoque magnis dis Valem parturient...
+			p.blog__date.
+				5 july 2014
+		.blog__wrap-content
+			img.blog__picture(src="img/blog2.jpg", alt="картинка")
+			p.blog__text.
+				socis natoque magnis dis Valem parturient...
+			p.blog__date.
+				13 Feburary 201
+	//- Фьючерсы
+	.features
+		.features__wrap-content
+			img.features__icon(src="img/icon.png", alt="иконка")
+			span.features__text.
+				phoncus ut, imperdiet velarodis venenatis vitae justo ullanique dictum felis eu pede mollisyka pretium massa.
+			.features__button.
+				FIND MORE &nbsp;&rarr; 
+		.features__wrap-content
+			img.features__icon(src="img/icon1.png", alt="иконка")
+			span.features__text.
+				phoncus ut, imperdiet velarodis venenatis vitae justo ullanique dictum felis eu pede mollisyka pretium massa.
+			.features__button.
+				FIND MORE &nbsp;&rarr; 
+		.features__wrap-content
+			img.features__icon(src="img/icon2.png", alt="иконка")
+			span.features__text.
+				phoncus ut, imperdiet velarodis venenatis vitae justo ullanique dictum felis eu pede mollisyka pretium massa.
+			.features__button.
+				FIND MORE &nbsp;&rarr; 
+		.features__wrap-content
+			img.features__icon(src="img/icon3.png", alt="иконка")
+			span.features__text.
+				phoncus ut, imperdiet velarodis venenatis vitae justo ullanique dictum felis eu pede mollisyka pretium massa.
+			.features__button.
+				FIND MORE &nbsp;&rarr; 
+	//- Контент
+	.content
+		.content__wrap
+			img.content__picture(src="img/blog1.jpg", alt="картинка")
+			p.content__caption.
+				Lorem ipsum dolor sit adipiscing ligula eget dolorp massa.
+			p.content__text.
+				Lenean commodo ligula eget dolor, aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus donec quam felis ultricies nec pellentesque eu.
+		.content__wrap
+			img.content__picture(src="img/blog2.jpg", alt="картинка")
+			p.content__caption.
+				Lorem ipsum dolor sit adipiscing ligula eget dolorp massa.
+			p.content__text.
+				Lenean commodo ligula eget dolor, aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus donec quam felis ultricies nec pellentesque eu
+	//- Действие
+	.action
+		p.action__text.
+			Renean commodo ligula vael massa sociis natoque penatibus nascetur ridiculus.
+		.action__button.
+			SIGN UP NOW
+	//- Подвал
+	footer.foot
+		p.foot__name.
+			Bella
+		ul.foot__list
+			li.foot__text About Us
+			li.foot__text Team
+			li.foot__text News
+			li.foot__text Contact
+		p.foot__copyright.
+			© 2014 pixelhint.com. All Rights Reserve

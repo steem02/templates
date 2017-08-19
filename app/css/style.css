@@ -53,7 +53,6 @@ header {
   width: 250px;
   height: 50px;
   text-align: center;
-  font-family: "Myriad Pro", Regular;
   font-size: 1.2em;
   letter-spacing: 1px;
   -webkit-border-radius: 30px;
@@ -64,6 +63,33 @@ header {
 }
 .billboard span {
   line-height: 50px;
+}
+.servises {
+  height: 430px;
+}
+.servises__table {
+  margin: 0 auto;
+  border-spacing: 18px;
+  height: 100%;
+  width: 600px;
+}
+.servises__cells {
+  border: 1px solid #f00;
+  display: table-cell;
+  vertical-align: middle;
+  height: 430px;
+  width: 188px;
+}
+.servises__text {
+  color: #f00;
+}
+.servises__text::before {
+  content: "123";
+  display: block;
+  background: #fff url("../img/return.png");
+  width: 40px;
+  height: 50px;
+  border: 1px solid #f00;
 }
 
 /*# sourceMappingURL=style.css.map */
