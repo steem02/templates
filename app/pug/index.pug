@@ -30,82 +30,98 @@ body
 	.servises
 		.servises__table
 			.servises__cells
+				img.servises__picture(src="img/return.png", alt="картинка")
 				p.servises__text.
 					phoncus ut, imperdiet vel venenatis vitae justo ullam dictum felis eu pede mollis pretium massa.
 				.servises__button.
 					READ MORE &nbsp;&rarr;
 			.servises__cells
+				img.servises__picture(src="img/stopwatch.png", alt="картинка")
 				p.servises__text.
 					phoncus ut, imperdiet vel venenatis vitae justo ullam dictum felis eu pede mollis pretium massa.
 				.servises__button.
 					READ MORE &nbsp;&rarr;
 			.servises__cells
+				img.servises__picture(src="img/reminders.png", alt="картинка")
 				p.servises__text.
 					phoncus ut, imperdiet vel venenatis vitae justo ullam dictum felis eu pede mollis pretium massa.
 				.servises__button.
 					READ MORE &nbsp;&rarr;
 	//- Отзывы
 	.testimonials
-		.testimonials__wrap-content
-			p.testimonials__text.
-				Donec quam felis ultricies nec pellentesque pretium quis sem massa quis enim. Donec pede justo fringilla vel aliquet nec vulputate eget magnis montes ligula eget.
-			p.testimonials__icon.
-				Alexander Doe 
-			p.testimonials__icon-text.
-				Senior UX Developer
-		.testimonials__wrap-content
-			span.testimonials__text.
-				Donec quam felis ultricies nec pellentesque pretium quis sem massa quis enim. Donec pede justo fringilla vel aliquet nec vulputate eget magnis montes ligula eget.
-			span.testimonials__icon.
-				Laurie Doe
-			p.testimonials__icon-text.
-				Marketing Exper
+		.testimonials__wrapper
+			.testimonials__wrap-content
+				p.testimonials__text.
+					Donec quam felis ultricies nec pellentesque pretium quis sem massa quis enim. Donec pede justo fringilla vel aliquet nec vulputate eget magnis montes ligula eget.
+				img.testimonials__icon(src="img/testimonials1.png", alt="картинка")
+				p.testimonials__name.
+					Alexander Doe 
+				p.testimonials__work.
+					Senior UX Developer
+			.testimonials__wrap-content
+				p.testimonials__text.
+					Donec quam felis ultricies nec pellentesque pretium quis sem massa quis enim. Donec pede justo fringilla vel aliquet nec vulputate eget magnis montes ligula eget.
+				img.testimonials__icon(src="img/testimonials2.png", alt="картинка")
+				p.testimonials__name.
+					Laurie Doe
+				p.testimonials__work.
+					Marketing Exper
 	//- Клиенты
 	.clients
-		img.clients__brand(src="/img/BRAND.png", alt="клиенты" title="клиенты")
-		img.clients__brand(src="img/BRAND.png", alt="клиенты" title="клиенты")
-		img.clients__brand(src="img/BRAND.png", alt="клиенты" title="клиенты")
-		img.clients__brand(src="img/BRAND.png", alt="клиенты" title="клиенты")
+		.clients__wrap
+			img.clients__brand(src="/img/BRAND.png", alt="клиенты" title="клиенты")
+			img.clients__brand(src="img/BRAND.png", alt="клиенты" title="клиенты")
+			img.clients__brand(src="img/BRAND.png", alt="клиенты" title="клиенты")
+			img.clients__brand(src="img/BRAND.png", alt="клиенты" title="клиенты")
 	//- Блог
 	.blog
-		.blog__wrap-content
-			img.blog__picture(src="img/blog1.jpg", alt="картинка")
-			p.blog__text.
-				socis natoque magnis dis Valem parturient...
-			p.blog__date.
-				5 july 2014
-		.blog__wrap-content
-			img.blog__picture(src="img/blog2.jpg", alt="картинка")
-			p.blog__text.
-				socis natoque magnis dis Valem parturient...
-			p.blog__date.
-				13 Feburary 201
+		.blog__wrapper
+			.blog__wrap-content
+				img.blog__picture(src="img/blog1.jpg", alt="картинка")
+				p.blog__text.
+					socis natoque magnis dis Valem parturient...
+				p.blog__date.
+					13 Feburary 2014
+			.blog__wrap-content
+				img.blog__picture(src="img/blog2.jpg", alt="картинка")
+				p.blog__text.
+					socis natoque magnis dis Valem parturient...
+				p.blog__date.
+					5 july 2014
 	//- Фьючерсы
 	.features
-		.features__wrap-content
-			img.features__icon(src="img/icon.png", alt="иконка")
-			span.features__text.
-				phoncus ut, imperdiet velarodis venenatis vitae justo ullanique dictum felis eu pede mollisyka pretium massa.
-			.features__button.
-				FIND MORE &nbsp;&rarr; 
-		.features__wrap-content
-			img.features__icon(src="img/icon1.png", alt="иконка")
-			span.features__text.
-				phoncus ut, imperdiet velarodis venenatis vitae justo ullanique dictum felis eu pede mollisyka pretium massa.
-			.features__button.
-				FIND MORE &nbsp;&rarr; 
-		.features__wrap-content
-			img.features__icon(src="img/icon2.png", alt="иконка")
-			span.features__text.
-				phoncus ut, imperdiet velarodis venenatis vitae justo ullanique dictum felis eu pede mollisyka pretium massa.
-			.features__button.
-				FIND MORE &nbsp;&rarr; 
-		.features__wrap-content
-			img.features__icon(src="img/icon3.png", alt="иконка")
-			span.features__text.
-				phoncus ut, imperdiet velarodis venenatis vitae justo ullanique dictum felis eu pede mollisyka pretium massa.
-			.features__button.
-				FIND MORE &nbsp;&rarr; 
+		.features__wrapper
+			table.features__tab
+				tr.features__row
+					td.features__wrap-content
+						img.features__icon(src="img/icon.png", alt="иконка")
+						div.features__textindent
+							p.features__text.
+								phoncus ut, imperdiet velarodis venenatis vitae justo ullanique dictum felis eu pede mollisyka pretium massa.
+							.features__button.
+								FIND MORE &nbsp;&rarr; 
+					td.features__wrap-content
+						img.features__icon(src="img/icon1.png", alt="иконка")
+						div.features__textindent
+							p.features__text.
+								phoncus ut, imperdiet velarodis venenatis vitae justo ullanique dictum felis eu pede mollisyka pretium massa.
+							.features__button.
+								FIND MORE &nbsp;&rarr; 
+				tr.features__row
+					td.features__wrap-content
+						img.features__icon(src="img/icon2.png", alt="иконка")
+						div.features__textindent
+							p.features__text.
+								phoncus ut, imperdiet velarodis venenatis vitae justo ullanique dictum felis eu pede mollisyka pretium massa.
+							.features__button.
+								FIND MORE &nbsp;&rarr; 
+					td.features__wrap-content
+						img.features__icon(src="img/icon3.png", alt="иконка")
+						div.features__textindent
+							p.features__text.
+								phoncus ut, imperdiet velarodis venenatis vitae justo ullanique dictum felis eu pede mollisyka pretium massa.
+							.features__button.
+								FIND MORE &nbsp;&rarr; 
 	//- Контент
 	.content
 		.content__wrap
