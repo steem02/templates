@@ -69,7 +69,7 @@ body
 	//- Клиенты
 	.clients
 		.clients__wrap
-			img.clients__brand(src="/img/BRAND.png", alt="клиенты" title="клиенты")
+			img.clients__brand(src="img/BRAND.png", alt="клиенты" title="клиенты")
 			img.clients__brand(src="img/BRAND.png", alt="клиенты" title="клиенты")
 			img.clients__brand(src="img/BRAND.png", alt="клиенты" title="клиенты")
 			img.clients__brand(src="img/BRAND.png", alt="клиенты" title="клиенты")
@@ -124,24 +124,28 @@ body
 								FIND MORE &nbsp;&rarr; 
 	//- Контент
 	.content
-		.content__wrap
-			img.content__picture(src="img/blog1.jpg", alt="картинка")
-			p.content__caption.
-				Lorem ipsum dolor sit adipiscing ligula eget dolorp massa.
-			p.content__text.
-				Lenean commodo ligula eget dolor, aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus donec quam felis ultricies nec pellentesque eu.
-		.content__wrap
-			img.content__picture(src="img/blog2.jpg", alt="картинка")
-			p.content__caption.
-				Lorem ipsum dolor sit adipiscing ligula eget dolorp massa.
-			p.content__text.
-				Lenean commodo ligula eget dolor, aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus donec quam felis ultricies nec pellentesque eu
+		.content__wrapper
+			.content__wrap-content
+				img.content__picture(src="img/blog1.jpg", alt="картинка")
+				p.content__caption.
+					Lorem ipsum dolor sit adipiscing ligula eget dolorp massa.
+				p.content__text.
+					Lenean commodo ligula eget dolor, aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus donec quam felis ultricies nec pellentesque eu.
+			.content__wrap-content
+				img.content__picture(src="img/blog2.jpg", alt="картинка")
+				p.content__caption.
+					Lorem ipsum dolor sit adipiscing ligula eget dolorp massa.
+				p.content__text.
+					Lenean commodo ligula eget dolor, aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus donec quam felis ultricies nec pellentesque eu
 	//- Действие
 	.action
-		p.action__text.
-			Renean commodo ligula vael massa sociis natoque penatibus nascetur ridiculus.
-		.action__button.
-			SIGN UP NOW
+		.action__wrapper
+			p.action__text Renean commodo 
+				b ligula vael massa 
+				b/sociis natoque penatibus nascetur ridiculus.
+			.action__button.
+			p/
+				SIGN UP NOW
 	//- Подвал
 	footer.foot
 		p.foot__name.

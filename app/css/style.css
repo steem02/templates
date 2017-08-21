@@ -183,7 +183,6 @@ header {
   margin-top: 100px;
   font-size: 1rem;
   line-height: 0;
-  backgournd: #008000;
 }
 .blog__wrapper div:first-child {
   margin-right: 40px;
@@ -195,7 +194,7 @@ header {
 }
 .blog__text {
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.5em;
 }
 .blog__date {
@@ -236,7 +235,51 @@ header {
   margin: 0;
   font-size: 0.9em;
   font-weight: 500;
-  line-height: 1em;
+  color: #7e7e7e;
+}
+.content {
+  height: 575px;
+  background: #fcfcfc;
+}
+.content__wrapper {
+  width: 600px;
+  height: 100%;
+  margin: 0 auto;
+}
+.content__wrapper div:first-child {
+  margin: 100px 0 40px;
+}
+.content__wrap-content {
+  display: inline-block;
+  height: 176px;
+  line-height: 0;
+}
+.content__wrap-content p {
+  float: right;
+  width: 372px;
+  line-height: 1.5em;
+  margin-top: 0;
+}
+.content__picture {
+  float: left;
+  width: 188px;
+  height: 156px;
+  margin-top: 5px;
+}
+.content__caption {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+p.content__text {
+  line-height: 1.8em;
+}
+.action {
+  height: 350px;
+}
+.action__wrapper {
+  height: 100%;
+  width: 600px;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=style.css.map */
