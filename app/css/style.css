@@ -1,0 +1,55 @@
+@font-face {
+  font-family: Alegreya;
+  src: url("../fonts/AlegreyaSans-Light.otf");
+}
+html {
+  font: 9px Alegreya;
+  letter-spacing: 0.5em;
+}
+.container1 {
+  min-width: 1260px;
+  width: 100%;
+  height: 902px;
+  margin: 0 auto;
+  background: #d9dadc url("../img/hero.jpg") no-repeat;
+  background-size: cover;
+}
+.header {
+  width: 100%;
+  height: 70px;
+  background: url("../img/navi_bg.png");
+}
+.header__wrapper {
+  min-width: 1260px;
+  max-width: 1600px;
+  height: 70px;
+  margin: 0 auto;
+}
+.header__logo {
+  float: left;
+  width: 140px;
+  height: 100%;
+  margin-left: 170px;
+  background: url("../img/gustoso.png") no-repeat 0 50%;
+  line-height: 70px;
+  opacity: 0.7;
+}
+.header__navi {
+  width: 720px;
+  height: 70px;
+  margin: 0 auto;
+  line-height: 70px;
+  text-align: center;
+  color: #f3f2f1;
+}
+.header__link {
+  display: inline-block;
+  margin: 0 30px;
+  color: #f3f2f1;
+}
+.header__link:link,
+.header__link:visited {
+  color: #f3f2f1;
+}
+
+/*# sourceMappingURL=style.css.map */
