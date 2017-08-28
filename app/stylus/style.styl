@@ -26,6 +26,9 @@ shad()
 @font-face
 	font-family Proxima
 	src: url(../fonts/ProximaNova.ttf)
+@font-face
+	font-family Scriptina
+	src: url(../fonts/scriptina.ttf)
 
 
 html
@@ -197,4 +200,101 @@ html
 	bw()
 	height 750px
 	background url(../img/art-of-cakes.jpg) no-repeat
+
+// Левая сторона
+
+.wrapper
+	mw()
+	height 750px
+	text-align center
+	line-height 750px
+
+.art
+	display inline-block
+	width 630px
+	height 580px
+	line-height normal
+	vartical-align middle
+	text-align center
+	letter-spacing 1px
+	r()
+
+.art__caption
+	display inline-block
+	width 280px
+	height 70px
+	font 35px Alegreya
+	text-align center
+	font-weight 900
+
+.art__we
+	font-size 12px
+	text-transform uppercase
+	color #a47d5e
+
+.art__text
+	display inline-block
+	width 475px
+	text-align center
+	font 13px Proxima
+
+.art__chef
+	font 18px Alegreya
+	font-weight 900
+
+.art__photo
+	display inline-block
+	width 370px
+	height 100px
+	line-height 100px
+
+.art__name
+	display inline-block
+	width 110px
+	height 40px
+	font-size 18px
+	line-height 40px
+	border-top 1px solid #d7d5ca
+	border-bottom 1px solid #d7d4ca
+
+.art__picture
+	margin 0 20px
+	vertical-align middle
+	
+.tastes
+	display inline-block
+	width 630px
+	height 580px
+	line-height normal
+	vertical-align middle
+	r()
+
+.tastes__one
+	background url(../img/img.jpg)
+.tastes__two
+	background url(../img/img0.jpg)
+.tastes__three
+	background url(../img/img1.jpg)
+.tastes__four
+	background url(../img/img2.jpg)
+
+.tastes__photo
+	position relative
+	display inline-block
+	width 298px
+	height 252px
+	background-size cover
+	background-repeat no-repeat
+	background-position 0 50%
+
+.tastes__photo:after
+	content ''
+	position absolute
+	left 50%
+	top 50%
+	transform translate(-50%,-50%)
+	width 275px
+	height 230px
+	border 5px solid #fff
+	
 
