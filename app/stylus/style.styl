@@ -132,7 +132,7 @@ html
 	width 765px
 	height 93px
 	margin 0 auto
-	font 92px Playfair Arial
+	font 85px Playfair
 	font-weight 600
 	line-height 93px
 	text-align center
@@ -154,7 +154,7 @@ html
 	font 20px Proxima
 	text-align center
 	line-height 1.5
-	color #F3F2F2
+	color #fff
 	shad()
 	
 .hero__button
@@ -197,32 +197,42 @@ html
 // Страница 2
 
 .container2
+	background url(../img/art-of-cakes.jpg) no-repeat
 	bw()
 	height 750px
-	background url(../img/art-of-cakes.jpg) no-repeat
+	text-align center
 
-// Левая сторона
 
 .wrapper
+	display inline-block
 	mw()
 	height 750px
 	text-align center
 	line-height 750px
 
+// Левая сторона
+
 .art
 	display inline-block
-	width 630px
+	width 620px
 	height 580px
-	line-height normal
+	line-height 580px
 	vartical-align middle
 	text-align center
 	letter-spacing 1px
-	r()
+
+.art__wrap
+	display inline-block
+	width 480px
+	padding 0 70px
+	line-height normal
+	vertical-align middle
 
 .art__caption
 	display inline-block
 	width 280px
 	height 70px
+	margin-bottom 30px
 	font 35px Alegreya
 	text-align center
 	font-weight 900
@@ -235,10 +245,13 @@ html
 .art__text
 	display inline-block
 	width 475px
+	margin-bottom 30px
 	text-align center
 	font 13px Proxima
+	line-height 1.5em
 
 .art__chef
+	margin-bottom 30px
 	font 18px Alegreya
 	font-weight 900
 
@@ -246,6 +259,7 @@ html
 	display inline-block
 	width 370px
 	height 100px
+	margin-bottom 10px
 	line-height 100px
 
 .art__name
@@ -261,28 +275,79 @@ html
 	margin 0 20px
 	vertical-align middle
 	
+.art__quote
+	display inline-block
+	width 430px
+	height 100px
+	line-height 100px
+	color #a47d5e
+
+.art__cite
+	display inline-block
+	width 240px
+	height 60px
+	font 20px Scriptina
+	line-height 1.4em
+	vertical-align middle
+
+.art__quote span
+	display inline-block
+	font-family "Times New Roman" Times serif
+	font-size 60px 
+	
+.left
+	height 30px
+	line-height 1em
+	margin-right 50px
+	vertical-align top
+.right
+	height 30px
+	line-height 1em
+	margin-left 50px
+	vertical-align bottom
+
 .tastes
 	display inline-block
-	width 630px
+	width 620px
 	height 580px
+	line-height 580px
+	vertical-align middle
+	
+.tastes__sogood
+	display inline-block
+	position relative
 	line-height normal
 	vertical-align middle
-	r()
+
+.tastes__sogood:after
+	content ''
+	position absolute
+	left 50%
+	top 50%
+	transform translate(-50%,-50%)
+	width 247px
+	height 247px
+	background url(../img/vector.png)
+	opacity 0.95
 
 .tastes__one
 	background url(../img/img.jpg)
+	margin 0 20px 20px 0
 .tastes__two
 	background url(../img/img0.jpg)
+	margin-bottom 20px
 .tastes__three
 	background url(../img/img1.jpg)
+	margin-right 20px
 .tastes__four
 	background url(../img/img2.jpg)
 
 .tastes__photo
-	position relative
 	display inline-block
-	width 298px
+	position relative
+	width 294px
 	height 252px
+	vertical-align middle
 	background-size cover
 	background-repeat no-repeat
 	background-position 0 50%
