@@ -133,8 +133,8 @@ gulp.task('browser-sync', function(){
 });
 
 gulp.task('watch', function() { // включаем brsync,stylus до выполнения watch
-    gulp.watch('app/stylus/**/*.styl', gulp.series('css-min')); // наблюдение за stylus файлами
-    gulp.watch('app/pug/**/*.pug', gulp.series('pug'));
+    gulp.watch(['app/stylus/**/*.styl', 'app/stylus/includes/**/*.styl'], gulp.series('css-min')); // наблюдение за stylus файлами
+    gulp.watch(['app/pug/**/*.pug', 'app/pug/include/**/*.pug'], gulp.series('pug'));
     gulp.watch('app/js/**/*.*', gulp.series('jscript'))
     gulp.watch(['app/fonts/**/*.*','app/js/**/*.*'], gulp.series('build'))
     gulp.watch('app/img/**/*.*', gulp.series('img'))
