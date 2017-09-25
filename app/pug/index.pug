@@ -9,6 +9,7 @@ html(lang="ru")
 		link(rel="stylesheet", href="css/style.min.css")
 		link(rel="stylesheet", href="css/480css.min.css" media="only screen and (max-width: 480px)")
 		link(rel="stylesheet", href="css/768css.min.css")
+		script(defer src="js/first.js")
 	body
 		//- Меню
 		.container1
@@ -40,6 +41,7 @@ html(lang="ru")
 					p.hero__description.
 						We’re bringing you fresh ingredients every day in ways you can’t resist.
 					a(href="").hero__button OUR MENU
+				a(href="").hero__button_phone OUR MENU
 				.backery
 		//- Переходная рамка
 		.border
@@ -60,12 +62,12 @@ html(lang="ru")
 							span.left “
 							p.art__cite Unique creations for unique occasions.
 							span.right ”
-				.tastes
-					.tastes__sogood
-						.div.tastes__one.tastes__photo
-						.div.tastes__two.tastes__photo
-						.div.tastes__three.tastes__photo
-						.div.tastes__four.tastes__photo
+				.tastes.js__slide-contain
+					.tastes__sogood.js__slide
+						.div.tastes__one.tastes__photo.js__tastes-photo
+						.div.tastes__two.tastes__photo.js__tastes-photo
+						.div.tastes__three.tastes__photo.js__tastes-photo
+						.div.tastes__four.tastes__photo.js__tastes-photo
 		//- Страница 3
 		.container3
 			.pancakes

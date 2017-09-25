@@ -1,3 +1,15 @@
+.tastes__photo.js__img_right {
+  left: 100%;
+  -webkit-transform: scale(0.9) rotate(10deg);
+      -ms-transform: scale(0.9) rotate(10deg);
+          transform: scale(0.9) rotate(10deg);
+}
+.tastes__photo.js__img_left {
+  left: -100%;
+  -webkit-transform: scale(0.9) rotate(-10deg);
+      -ms-transform: scale(0.9) rotate(-10deg);
+          transform: scale(0.9) rotate(-10deg);
+}
 html {
   width: 100%;
   height: 100%;
@@ -29,7 +41,8 @@ footer {
   height: 100%;
 }
 .header {
-  height: 150px;
+  height: 20%;
+  background: rgba(1,1,1,0.3);
 }
 .header__wrapper {
   width: 100%;
@@ -37,48 +50,197 @@ footer {
   height: 100%;
 }
 .header__logo {
-  width: 40%;
-  height: 100%;
-  margin: 0;
+  float: none;
+  display: block;
+  height: 50%;
+  margin: 0 auto;
 }
 .header__navi {
   display: none;
 }
 .header__social {
-  display: none;
-}
-.hero {
-  height: auto;
-  line-height: 1em;
-}
-.hero__wrapper {
+  float: none;
   width: 100%;
   height: auto;
-  line-height: 1em;
+  margin: 0 auto;
+}
+.header__icon {
+  width: 100%;
+  height: auto;
+}
+.header__icon-link {
+  width: 30px;
+  height: 28px;
+  margin: 0 15px;
+  background-size: cover;
+}
+.hero {
+  height: 80%;
+  line-height: normal;
+}
+.hero__wrapper {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+  height: auto;
+  line-height: 5em;
 }
 .hero__caption {
   width: 100%;
   height: auto;
   line-height: 1em;
-  font-size: 60px;
+  font-size: 52px;
   letter-spacing: 1px;
-}
-.hero__line {
-  width: 100%;
-  height: auto;
 }
 .hero__description {
   width: 100%;
   height: auto;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 .hero__button {
+  display: none;
+}
+.hero__button_phone {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  background: rgba(1,1,1,0.3);
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 50px;
+}
+.hero__button_phone:link,
+.hero__button_phone:visited {
+  color: #fff;
+}
+.container2 {
+  height: auto;
+  padding-bottom: 5%;
+}
+.wrapper {
+  position: relative;
   width: 100%;
   height: auto;
+  line-height: normal;
+}
+.art {
+  width: 100%;
+  height: auto;
+  line-height: normal;
+}
+.art__wrap {
+  width: 100%;
+  height: auto;
+  padding: 5% 0 0;
+  margin-bottom: 15%;
+}
+.art__caption {
+  width: 100%;
+  height: auto;
+  margin: 5% 0;
+  font-size: 30px;
+}
+.art__we {
+  font-size: 16px;
+}
+.art__text {
+  width: 90%;
+  margin: 10% 0;
+  font-size: 16px;
+  text-align: justify;
+}
+.art__chef {
+  margin-bottom: 3%;
+  font-size: 22px;
+}
+.art__photo {
+  width: 100%;
+  height: auto;
+  margin: 10% 0 12%;
+  line-height: normal;
+}
+.art__name {
+  font-size: 22px;
+  width: 50%;
+  height: 50%;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  background: rgba(200,200,200,0.2);
+  -webkit-box-shadow: 0 0 30px 1px #aaa;
+          box-shadow: 0 0 30px 1px #aaa;
+}
+.art__picture {
+  float: left;
+  width: 95px;
+  height: 95px;
+  margin: 0 3%;
+}
+.art__quote {
+  position: relative;
+  width: 100%;
+  height: auto;
+  line-height: normal;
+}
+.art__quote span {
+  display: block;
+  font-size: 50px;
+}
+.art__cite {
+  width: 80%;
+  height: auto;
+  font-size: 24px;
+}
+.left {
+  position: absolute;
+  top: -8px;
+  left: 10px;
+  margin: 0;
+  line-height: normal;
+}
+.right {
+  position: absolute;
+  bottom: -13px;
+  right: 10px;
+  margin: 0;
+  line-height: normal;
+}
+.tastes {
+  position: relative;
+  width: 95%;
+  height: 252px;
+  overflow: hidden;
+  line-height: 0;
+}
+.tastes__sogood {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+.tastes__sogood:after {
+  display: none;
+}
+.tastes__photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.tastes__photo:after {
+  width: 92%;
+  height: 92%;
 }
 .backery,
 .border,
-.container2,
 .container3,
 .container4,
 .container5,

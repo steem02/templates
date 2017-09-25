@@ -1,3 +1,4 @@
+@import 'includes/animatephone.styl'
 b()
 	border 3px solid red
 bw()
@@ -34,55 +35,169 @@ footer
 .foot
 	bw()
 
-
-
 	
 .header
-	height 150px
-
+	height 20%
+	background rgba(1,1,1,0.3)
 .header__wrapper
 	dw()
 	height 100%
-
 .header__logo
-	width 40%
-	height 100%
-	margin 0
-	
+	float none
+	display block
+	height 50%
+	margin 0 auto
 .header__navi
 	display none
 	
 .header__social
-	display none
-	
-.hero 
-	height auto
-	line-height 1em
-
-.hero__wrapper
+	float none
 	dw()
-	line-height 1em
+	margin 0 auto
+.header__icon
+	dw()
+.header__icon-link
+	width 30px
+	height 28px
+	margin 0 15px
+	background-size cover
+	
 
+.hero
+	height 80%
+	line-height normal
+.hero__wrapper
+	position absolute
+	top 50%
+	left 0
+	transform translateY(-50%)
+	dw()
+	line-height 5em
 .hero__caption
 	dw()
 	line-height 1em
-	font-size 60px
+	font-size 52px
 	letter-spacing 1px
-	
-.hero__line
-	dw()
-	
+
 .hero__description
 	dw()
-	font-size 1.5em
-	
+	font-size 1.3em
 .hero__button
-	dw()
+	display none
+.hero__button_phone
+	position absolute
+	bottom 0
+	left 0
+	display inline-block
+	width 100%
+	height 50px
+	text-align center
+	background rgba(1,1,1,0.3)
+	font-size 14px
+	font-weight 900
+	line-height 50px
+.hero__button_phone:link,
+.hero__button_phone:visited
+	color #fff	
 
+// container2
+.container2
+	height auto
+	padding-bottom 5%
+.wrapper
+	position relative
+	width 100%
+	height auto
+	line-height normal
+.art
+	dw()
+	line-height normal
+.art__wrap
+	dw()
+	padding 5% 0 0
+	margin-bottom 15%
+.art__caption
+	dw()
+	margin 5% 0
+	font-size 30px
+.art__we
+	font-size 16px
+.art__text
+	width 90%
+	margin 10% 0
+	font-size 16px
+	text-align justify
+.art__chef
+	margin-bottom 3%
+	font-size 22px
+.art__photo
+	dw()
+	margin 10% 0 12%
+	line-height normal
+.art__name
+	font-size 22px
+	width 50%
+	height 50%
+	border-radius 10px
+	background rgba(200,200,200,0.2)
+	box-shadow 0 0 30px 1px #aaa
+.art__picture
+	float left
+	width 95px
+	height 95px
+	margin 0 3%
+.art__quote
+	position relative
+	dw()
+	line-height normal
+.art__quote span
+	display block
+	font-size 50px
+.art__cite
+	width 80%
+	height auto
+	font-size 24px
+.left
+	position absolute
+	top -8px
+	left 10px
+	margin 0
+	line-height normal
+.right
+	position absolute
+	bottom -13px
+	right 10px
+	margin 0
+	line-height normal
+
+
+.tastes
+	position relative
+	width 95%
+	height 252px
+	overflow hidden
+	line-height 0
+.tastes__sogood
+	width 100%
+	height 100%
+	text-align left
+.tastes__sogood:after 
+	display none
+.tastes__photo
+	position absolute
+	top 0
+	left 0
+	width 100%
+	transition all .5s ease-out
+.tastes__photo:after
+	width 92%
+	height 92%
+	
+	
+	
 // ВРЕМЕННЫЙ ДИСПЛЕЙ	
 .backery,	
 .border,
-.container2,
 .container3,
 .container4,
 .container5,
