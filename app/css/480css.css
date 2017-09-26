@@ -1,14 +1,54 @@
 .tastes__photo.js__img_right {
-  left: 100%;
-  -webkit-transform: scale(0.9) rotate(10deg);
-      -ms-transform: scale(0.9) rotate(10deg);
-          transform: scale(0.9) rotate(10deg);
+  -webkit-transform: translateX(380px) scale(0.8) rotate(30deg);
+      -ms-transform: translateX(380px) scale(0.8) rotate(30deg);
+          transform: translateX(380px) scale(0.8) rotate(30deg);
 }
 .tastes__photo.js__img_left {
-  left: -100%;
-  -webkit-transform: scale(0.9) rotate(-10deg);
-      -ms-transform: scale(0.9) rotate(-10deg);
-          transform: scale(0.9) rotate(-10deg);
+  -webkit-transform: translateX(-380px) scale(0.8) rotate(-30deg);
+      -ms-transform: translateX(-380px) scale(0.8) rotate(-30deg);
+          transform: translateX(-380px) scale(0.8) rotate(-30deg);
+}
+.tastes__photo.js__img_transition {
+  -webkit-transition: -webkit-transform 1s ease-out;
+  transition: -webkit-transform 1s ease-out;
+  transition: transform 1s ease-out;
+  transition: transform 1s ease-out, -webkit-transform 1s ease-out;
+}
+@media only screen and (max-width: 340px) {
+  .tastes__photo.js__img_right {
+    -webkit-transform: translateX(310px) scale(0.8) rotate(30deg);
+        -ms-transform: translateX(310px) scale(0.8) rotate(30deg);
+            transform: translateX(310px) scale(0.8) rotate(30deg);
+  }
+  .tastes__photo.js__img_left {
+    -webkit-transform: translateX(-310px) scale(0.8) rotate(-30deg);
+        -ms-transform: translateX(-310px) scale(0.8) rotate(-30deg);
+            transform: translateX(-310px) scale(0.8) rotate(-30deg);
+  }
+}
+@media only screen and (min-width: 376px) and (max-width: 414px) {
+  .tastes__photo.js__img_right {
+    -webkit-transform: translateX(414px) scale(0.8) rotate(30deg);
+        -ms-transform: translateX(414px) scale(0.8) rotate(30deg);
+            transform: translateX(414px) scale(0.8) rotate(30deg);
+  }
+  .tastes__photo.js__img_left {
+    -webkit-transform: translateX(-414px) scale(0.8) rotate(-30deg);
+        -ms-transform: translateX(-414px) scale(0.8) rotate(-30deg);
+            transform: translateX(-414px) scale(0.8) rotate(-30deg);
+  }
+}
+@media only screen and (min-width: 376px) and (max-width: 414px) {
+  .tastes__photo.js__img_right {
+    -webkit-transform: translateX(414px) scale(0.8) rotate(30deg);
+        -ms-transform: translateX(414px) scale(0.8) rotate(30deg);
+            transform: translateX(414px) scale(0.8) rotate(30deg);
+  }
+  .tastes__photo.js__img_left {
+    -webkit-transform: translateX(-414px) scale(0.8) rotate(-30deg);
+        -ms-transform: translateX(-414px) scale(0.8) rotate(-30deg);
+            transform: translateX(-414px) scale(0.8) rotate(-30deg);
+  }
 }
 html {
   width: 100%;
@@ -232,8 +272,6 @@ footer {
   top: 0;
   left: 0;
   width: 100%;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
 }
 .tastes__photo:after {
   width: 92%;
