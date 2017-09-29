@@ -8,12 +8,6 @@
       -ms-transform: translateX(-380px) scale(0.8) rotate(-30deg);
           transform: translateX(-380px) scale(0.8) rotate(-30deg);
 }
-.js__slide .tastes__photo.js__img_transition {
-  -webkit-transition: -webkit-transform 1s ease-out;
-  transition: -webkit-transform 1s ease-out;
-  transition: transform 1s ease-out;
-  transition: transform 1s ease-out, -webkit-transform 1s ease-out;
-}
 @media only screen and (max-width: 340px) {
   .js__slide .tastes__photo.js__img_right {
     -webkit-transform: translateX(310px) scale(0.8) rotate(30deg);
@@ -272,11 +266,10 @@ footer {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
-  -webkit-transition: -webkit-transform 1s ease-out;
-  transition: -webkit-transform 1s ease-out;
-  transition: transform 1s ease-out;
-  transition: transform 1s ease-out, -webkit-transform 1s ease-out;
+  -webkit-transition: -webkit-transform 0.5s ease-out;
+  transition: -webkit-transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
 }
 .tastes__photo:after {
   width: 92%;
