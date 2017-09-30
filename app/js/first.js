@@ -13,9 +13,7 @@ function activePhone480(media) {
             this.picture = img;
             this.container = container;
             this._LENGTH = this.picture.length;
-            this.count = 1;
-            this.initialPoint = null;
-            this.finalPoint = null;
+            this._COUNT = 2;
         };
         SliderPhone.prototype.getIndexPictures = function (num) {
                 
@@ -45,7 +43,7 @@ function activePhone480(media) {
                     left = img.length - 1;
                 };
                 return {left:left,right:right,under:under,count:num};
-            };
+        };
         SliderPhone.prototype.swipeLeft = function (num) {
             var obj = this.getIndexPictures(num);
             img[obj.under].style.display = 'none';
@@ -55,8 +53,8 @@ function activePhone480(media) {
             img[obj.count].classList.add('js__img_left');
             img[obj.under].classList.add('js__img_right');
             img[obj.under].style.display = 'inline-block';
-            count = obj.count;
-            this.count++;
+            obj.count++
+            return obj.count;
         };
         SliderPhone.prototype.swipeRight = function (num) {
             var obj = this.getIndexPictures(num);
@@ -67,8 +65,8 @@ function activePhone480(media) {
             img[obj.count].classList.add('js__img_right');
             img[obj.under].classList.add('js__img_left');
             img[obj.under].style.display = 'inline-block';
-            count = obj.count;
-            this.count--;
+            obj.count--;
+            return obj.count;
         };
         SliderPhone.prototype.begin = function () {
                 
@@ -81,66 +79,40 @@ function activePhone480(media) {
             };
         
         };
-        SliderPhone.prototype.eventSliderTouchStart = function (event) {
-            event.preventDefault();
-            event.stopPropagation();
-            this.initialPoint = event.changedTouches[0];
-        };
-        SliderPhone.prototype.eventSliderTouchEnd = function (event) {
-            event.preventDefault();
-            event.stopPropagation();
-            this.finalPoint = event.changedTouches[0];
-            var xAbs = Math.abs(this.initialPoint.pageX - this.finalPoint.pageX);
-          
-            if (xAbs > 5) {
-                
-                if (this.finalPoint.pageX < this.initialPoint.pageX){
-                    this.swipeLeft(this.count);
-                    
-                } else {
-                    this.swipeRight(this.count);
-                };
-                 
-            };
-        };
         SliderPhone.prototype.touchMove = function () {
-            var count = 1;
+            var count = this._COUNT;
             var img = this.picture;
-            var self = this;
-            // function swipeLeft(num) {
-                
-            // };
-            // function swipeRight(num) {
-                
-            // };
-            //Move
             var initialPoint;
             var finalPoint;
-            // eventSliderTouchStart = function(event) {
-            //     event.preventDefault();
-            //     event.stopPropagation();
-            //     this.initialPoint = event.changedTouches[0];
-            // };
-            // eventSliderTouchEnd = function(event) {
-            //     event.preventDefault();
-            //     event.stopPropagation();
-            //     this.finalPoint=event.changedTouches[0];
-            //     var xAbs = Math.abs(this.initialPoint.pageX - this.finalPoint.pageX);
+            var swipeLeft = this.swipeLeft.bind(this);
+            var swipeRight = this.swipeRight.bind(this);
+            eventSliderTouchStart = function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                initialPoint = event.changedTouches[0];
+            };
+            eventSliderTouchEnd = function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                finalPoint = event.changedTouches[0];
+                var xAbs = Math.abs(initialPoint.pageX - finalPoint.pageX);
               
-            //     if (xAbs > 5) {
+                if (xAbs > 5) {
                     
-            //         if (this.finalPoint.pageX < this.initialPoint.pageX){
-            //             this.swipeLeft(count);
+                    if (finalPoint.pageX < initialPoint.pageX){
+                        var a = swipeLeft(count);
+                        count = a;
                         
-            //         } else {
-            //             this.swipeRight(count);
-            //         };
+                    } else {
+                        var b = swipeRight(count);
+                        count = b;
+                    };
                      
-            //     };
+                };
             
-            // };
-            this.container.addEventListener('touchstart',this.eventSliderTouchStart, false);
-            this.container.addEventListener('touchend',this.eventSliderTouchEnd, false);
+            };
+            this.container.addEventListener('touchstart',eventSliderTouchStart, false);
+            this.container.addEventListener('touchend',eventSliderTouchEnd, false);
             if (!document.ontouchstart || !document.ontouchend) {
                 this.container.onclick = function () {
                     this.swipeLeft(this.count);
@@ -149,12 +121,25 @@ function activePhone480(media) {
         };
         SliderPhone.prototype.scrollVisible = function () {
             var container = this.container;
+            var swipeLeft = this.swipeLeft.bind(this);
+            var img = this.picture;
+
             eventSliderScroll = function (e) {
                 var winHeight = document.body.clientHeight;
                 var sliderCoord = container.getBoundingClientRect();
+                
+                // Вычисление задержки для свайпа после загрузки
+                function getTimeTransition () {
+
+                    var pause = delay + duration;
+                };
+                
+
                 if (sliderCoord.top < winHeight) {
                     container.style.opacity = '1';
-                    
+                    setTimeout(function () {
+                        swipeLeft(1);
+                    }, 500);
                     window.removeEventListener('scroll', eventSliderScroll);
                 };
             };
