@@ -13,7 +13,7 @@ function activePhone480(media) {
             this.picture = img;
             this.container = container;
             this._LENGTH = this.picture.length;
-            this._COUNT = 2;
+            this._COUNT = 2; 
         };
         SliderPhone.prototype.getIndexPictures = function (num) {
                 
@@ -115,7 +115,8 @@ function activePhone480(media) {
             this.container.addEventListener('touchend',eventSliderTouchEnd, false);
             if (!document.ontouchstart || !document.ontouchend) {
                 this.container.onclick = function () {
-                    this.swipeLeft(this.count);
+                   var a = swipeLeft(count);
+                   count = a;
                 };
             };
         };
@@ -130,18 +131,20 @@ function activePhone480(media) {
                 
                 // Вычисление задержки для свайпа после загрузки
                 function getTimeTransition () {
-
-                    var pause = delay + duration;
+                    var reg = /\d\.?\d?/;
+                    var delay = +getComputedStyle(container).transitionDelay.match(reg)[0]; 
+                    var duration = +getComputedStyle(container).transitionDuration.match(reg)[0];
+                    return ((delay + duration)*1000 + 100) || 500;
                 };
                 
-
                 if (sliderCoord.top < winHeight) {
                     container.style.opacity = '1';
                     setTimeout(function () {
                         swipeLeft(1);
-                    }, 500);
+                    }, getTimeTransition());
                     window.removeEventListener('scroll', eventSliderScroll);
                 };
+
             };
             window.addEventListener('scroll', eventSliderScroll);
         };
