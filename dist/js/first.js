@@ -152,6 +152,17 @@ function activePhone480(media) {
         sld.begin();
         sld.touchMove();
         sld.scrollVisible();
+        
+        // pancakes        
+        
+        var icon = document.getElementsByClassName('pancakes__icon');
+        function setClassIcon(image) {
+            for (var i = 1; i < icon.length; i++) {
+                icon[i].classList.add('js__pancakes__icon_none');
+            };
+        };
+        setClassIcon(icon);
+       
     } else {
         container.removeEventListener('touchstart', eventSliderTouchStart);
         container.removeEventListener('touchend', eventSliderTouchEnd);
