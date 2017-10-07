@@ -216,6 +216,9 @@ if (window.matchMedia) {
                 sandwichIcon[i].classList.remove('js__sandwich_none');
                 sandwichIconTitle[i].classList.remove('js__sandwich__title_left');
                 sadwichIconText[i].classList.remove('js__sandwich__text_right');
+                sandwichIcon[k].classList.remove('sandwich__transition');
+                sandwichIconTitle[k].classList.remove('sandwich__transition');
+                sandwichIconText[k].classList.remove('sandwich__transition');
             };
         
         };

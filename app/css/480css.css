@@ -145,7 +145,7 @@ footer {
           transform: translateY(-50%);
   width: 100%;
   height: auto;
-  line-height: 5em;
+  line-height: 4em;
 }
 .hero__caption {
   width: 100%;
@@ -158,6 +158,7 @@ footer {
   width: 100%;
   height: auto;
   font-size: 1.3em;
+  line-height: 1.5em;
 }
 .hero__button {
   display: none;
@@ -650,9 +651,43 @@ footer {
   line-height: 1em;
   letter-spacing: 1px;
 }
-.backery,
-.border,
 footer {
+  height: 30%;
+  padding-top: 10%;
+}
+.foot {
+  width: 100%;
+  height: 100%;
+}
+.foot__wrapper {
+  height: auto;
+  vertical-align: top;
+}
+.foot__list-left {
+  float: none;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  padding: 0;
+}
+.foot__list-element_none {
+  display: none;
+}
+.foot__logo {
+  width: 100%;
+  height: 60px;
+  font-size: 30px;
+  line-height: 40px;
+}
+.foot__list-right {
+  float: none;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  padding: 0;
+}
+.backery,
+.border {
   display: none;
 }
 
