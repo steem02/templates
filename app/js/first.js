@@ -6,7 +6,7 @@ if (window.matchMedia) {
     var sandwichIcon = document.getElementsByClassName('sandwich__icon');
     var sandwichIconTitle = document.getElementsByClassName('sandwich__icontitle');
     var sandwichIconText = document.getElementsByClassName('sandwich__icontext');
-    var sld;
+    var sandwichTimeout;
     var naviButton = document.getElementsByClassName('navi__button')[0];
     var headerNavi = document.getElementsByClassName('header__navi')[0];
     activePhone480(mediaPhone);
@@ -168,7 +168,7 @@ if (window.matchMedia) {
                 };
                 window.addEventListener('scroll', eventScroll);
             };
-            sld = new SliderPhone(img, container, mediaPhone);
+            var sld = new SliderPhone(img, container, mediaPhone);
             sld.scrollVisible();
             sld.touchMove();
             
@@ -230,7 +230,7 @@ if (window.matchMedia) {
                     setScrollNone();
                     function createBackground () {
                         var elem = document.createElement('div');
-                        elem.classList.add('navi__background');
+                        elem.className = 'navi__background';
                         return elem;
                     }
                     function setScrollNone() {
@@ -268,8 +268,8 @@ if (window.matchMedia) {
                         backgroundElem.style.background = '';
                         setTimeout(function () {
                             backgroundElem.style.transition = '';
-                        }, 1000);
-                        backgroundElem.style.transform = '';
+                            backgroundElem.style.transform = '';
+                        }, 300);
                         backgroundElem.removeEventListener('touchstart', hideTouchBackground);
                         list.classList.add('js__navi_min');
                         list.classList.remove('js__navi_show');
@@ -280,8 +280,10 @@ if (window.matchMedia) {
                     };
                     function showMenu(e) {
                         backgroundElem.style.transform = 'scale(1)';
-                        backgroundElem.style.transition = 'transition all 1s ease';
-                        backgroundElem.style.background = '#000';
+                        setTimeout(function () {
+                            backgroundElem.style.transition = 'all .3s cubic-bezier(0, 0, 0.5, 0.99)';
+                            backgroundElem.style.background = '#000';
+                        }, 200);
                         backgroundElem.addEventListener('touchstart', hideTouchBackground);
                         list.classList.add('js__navi_max');
                         list.classList.add('js__navi_show');
@@ -312,12 +314,21 @@ if (window.matchMedia) {
                     this.button.addEventListener('click', eventClick);
                     if (media) { 
                         media.addListener(function () {
-                            button.removeEventListener('click', eventClick);
-                            button.removeEventListener('mousedown', downButton);
-                            button.removeEventListener('mouseup', upButton);
-                            backgroundElem.removeEventListener('touchstart', hideTouchBackground);
-                            document.body.removeChild(backgroundElem);
+                            if (!media.matches) {
+                                button.removeEventListener('click', eventClick);
+                                button.removeEventListener('touchstart', downButtonAnimate);
+                                button.removeEventListener('touchend', upButtonAnimate);
+                                backgroundElem.removeEventListener('touchstart', hideTouchBackground);
+                                document.body.lastElementChild.remove();
+                            };
                         });
+                    };
+                };
+                this.scroll = function () {
+                    var media = this.media;
+                    window.addEventListener('scroll', hideButton);
+                    function hideButton() {
+                        // скролл
                     };
                 };
             };
@@ -327,7 +338,7 @@ if (window.matchMedia) {
         } else {
             container.firstElementChild.classList.remove('js__slide');
             headerNavi.className = 'header__navi';
-            clearTimeout(sandwichTimeout);
+            if (sandwichTimeout) clearTimeout(sandwichTimeout);
             for (var i = 0; i < img.length; i++) {
                 img[i].classList.remove('js__img_left');
                 img[i].classList.remove('js__img_right');
