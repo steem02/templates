@@ -253,7 +253,7 @@ if (window.matchMedia) {
                         e.stopPropagation();
                         if(e.target == this) {
                             button.style.boxShadow = 'none';
-                            button.style.transform = 'scale(.9)';
+                            button.style.transform = 'scale(.8)';
                         };
                         
                     };
@@ -269,7 +269,7 @@ if (window.matchMedia) {
                         setTimeout(function () {
                             backgroundElem.style.transition = '';
                             backgroundElem.style.transform = '';
-                        }, 300);
+                        }, 200);
                         backgroundElem.removeEventListener('touchstart', hideTouchBackground);
                         list.classList.add('js__navi_min');
                         list.classList.remove('js__navi_show');
@@ -281,7 +281,7 @@ if (window.matchMedia) {
                     function showMenu(e) {
                         backgroundElem.style.transform = 'scale(1)';
                         setTimeout(function () {
-                            backgroundElem.style.transition = 'all .3s cubic-bezier(0, 0, 0.5, 0.99)';
+                            backgroundElem.style.transition = 'all .2s cubic-bezier(0, 0, 0.5, 0.99)';
                             backgroundElem.style.background = '#000';
                         }, 200);
                         backgroundElem.addEventListener('touchstart', hideTouchBackground);
@@ -326,14 +326,36 @@ if (window.matchMedia) {
                 };
                 this.scroll = function () {
                     var media = this.media;
+                    var button = this.button;
+                    var timer, state;
                     window.addEventListener('scroll', hideButton);
                     function hideButton() {
-                        // скролл
+
+                        if (state) {
+                            button.style.transition = 'all .8s cubic-bezier(.54,.94,.84,1.23)';
+                            button.style.transform = 'translate(10%,-10%) scale(0)';
+                            button.style.opacity = '0';
+                            button.style.background = '#2225FF';
+                            state = false;
+                        };
+
+                        clearTimeout(timer);
+                        timer = setTimeout(function () {
+                            button.style.transition = 'all 1.2s cubic-bezier(.54,.94,.84,1.23)';
+                            button.style.transform = '';
+                            button.style.opacity = '';
+                            setTimeout(function () {
+                                button.style.transition = '';
+                            }, 900);
+                            button.style.background = '';
+                            state = true;
+                        }, 1000);
                     };
                 };
             };
             var headerMenu = new Menu(naviButton, headerNavi, mediaPhone);
             headerMenu.click();
+            headerMenu.scroll();
            
         } else {
             container.firstElementChild.classList.remove('js__slide');
