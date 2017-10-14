@@ -19,7 +19,7 @@
 
 @media only screen and (min-width: 376px) and (max-width: 414px)
 	.js__slide .tastes__photo.js__img_right
-       transform translateX(414px) scale(.8) rotate(30deg)
+        transform translateX(414px) scale(.8) rotate(30deg)
 	.js__slide .tastes__photo.js__img_left
         transform translateX(-414px) scale(.8) rotate(-30deg)
 
@@ -35,3 +35,12 @@
 .sandwich__transition
     transition all 1.5s cubic-bezier(0.34, 0.08, 0.35, 1.04)
 // cubic-bezier(1, -0.23, 0, 1.62)
+
+// menu fixed
+
+.header__navi.js__navi_show
+    transform scale(1)
+.header__navi.js__navi_max
+    transition all .4s cubic-bezier(0.4, 0, 0.41, 1.56)
+.header__navi.js__navi_min
+    transition all .2s cubic-bezier(0.21, 0.63, 0.63, 0.75)

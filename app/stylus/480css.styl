@@ -47,9 +47,57 @@ footer
 	display block
 	height 50%
 	margin 0 auto
-.header__navi
-	display none
 	
+.navi__button
+	display inline-block
+	position fixed
+	right -40px
+	top -40px
+	z-index 999
+	width 100px
+	height 100px
+	background #000 url('../img/widget/menu.png') 30% 70% no-repeat
+	background-size 15%
+	border-radius 50%
+	box-shadow -2px 2px 10px 1px #000
+	transition all .3s ease-out
+	opacity .7
+.navi__background
+	position fixed
+	top 0
+	bottom 0
+	left 0
+	right 0
+	transform scale(0)
+	opacity .4
+.header__navi
+	position absolute
+	left -201px
+	bottom -374px
+	z-index 998
+	display inline-block
+	width 230px
+	height 380px
+	margin 0
+	padding 10px 10px
+	transform-origin 86% 3%
+	transform scale(0)
+	border-radius 21%
+	line-height normal
+	box-shadow 3px -5px 43px -9px #000
+	background #000
+.header__navi > span
+	display none
+.header__link
+	display block
+	width 80%
+	margin 0 auto
+	font-size 1.1em
+	line-height 75px
+	font-weight 900
+	transition color .2 ease
+.header__link:hover
+	color orange
 .header__social
 	float none
 	dw()
@@ -72,16 +120,16 @@ footer
 	left 0
 	transform translateY(-50%)
 	dw()
-	line-height 5em
+	line-height 4em
 .hero__caption
 	dw()
 	line-height 1em
 	font-size 52px
 	letter-spacing 1px
-
 .hero__description
 	dw()
 	font-size 1.3em
+	line-height 1.5em
 .hero__button
 	display none
 .hero__button_phone
@@ -455,11 +503,35 @@ footer
 	line-height 1em
 	letter-spacing 1px
 	
-	
-	
-	
-// ВРЕМЕННЫЙ ДИСПЛЕЙ	
-.backery,	
-.border,
 footer
+	height 30%
+	padding-top 10%
+.foot
+	width 100%
+	height 100%
+.foot__wrapper
+	height auto
+	vertical-align top
+.foot__list-left
+	float none
+	width 100%
+	height 30px
+	line-height 30px
+	padding 0
+.foot__list-element_none
+	display none	
+.foot__logo
+	width 100%
+	height 60px
+	font-size 30px
+	line-height 40px
+.foot__list-right
+	float none
+	width 100%
+	height 30px
+	line-height 30px
+	padding 0
+	
+.backery,	
+.border
 	display none
