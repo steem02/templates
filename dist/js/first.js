@@ -327,7 +327,8 @@ if (window.matchMedia) {
                 this.scroll = function () {
                     var media = this.media;
                     var button = this.button;
-                    var timer, state;
+                    var state = true;
+                    var timer;
                     window.addEventListener('scroll', hideButton);
                     function hideButton() {
 
@@ -354,8 +355,8 @@ if (window.matchMedia) {
                 };
             };
             var headerMenu = new Menu(naviButton, headerNavi, mediaPhone);
-            headerMenu.click();
             headerMenu.scroll();
+            headerMenu.click();
            
         } else {
             container.firstElementChild.classList.remove('js__slide');
