@@ -18,19 +18,20 @@ html(lang="ru")
 					a(href="https://ya.ru").header__logo
 					.header__social
 						.header__icon
-							a(href="").header__icon-link.header__icon-link_twitter
-							a(href="").header__icon-link.header__icon-link_facebook
-							a(href="").header__icon-link.header__icon-link_instagram
-					.header__navi
-						a(href="").header__link WELCOME
-						span ~
-						a(href="").header__link MENU
-						span ~
-						a(href="").header__link RESERVATIONS
-						span ~
-						a(href="").header__link NEWS
-						span ~
-						a(href="").header__link CONTACTS
+							a(href="https://twitter.com").header__icon-link.header__icon-link_twitter
+							a(href="https://facebook.com").header__icon-link.header__icon-link_facebook
+							a(href="https://instagram.com").header__icon-link.header__icon-link_instagram
+					.navi__button
+						.header__navi
+							a(href="https://ya.ru").header__link WELCOME
+							span ~
+							a(href="https://ya.ru").header__link MENU
+							span ~
+							a(href="https://ya.ru").header__link RESERVATIONS
+							span ~
+							a(href="https://ya.ru").header__link NEWS
+							span ~
+							a(href="https://ya.ru").header__link CONTACTS
 					
 			//- Главное
 			.hero
@@ -40,8 +41,8 @@ html(lang="ru")
 					.hero__line
 					p.hero__description.
 						We’re bringing you fresh ingredients every day in ways you can’t resist.
-					a(href="").hero__button OUR MENU
-				a(href="").hero__button_phone OUR MENU
+					a(href="https://ya.ru").hero__button OUR MENU
+				a(href="https://ya.ru").hero__button_phone OUR MENU
 				.backery
 		//- Переходная рамка
 		.border
@@ -180,16 +181,22 @@ html(lang="ru")
 			.foot
 				.foot__wrapper
 					ul.foot__list-left
-						li.foot__list-left-element OUR MENU
-						li.foot__list-left-element ~
-						li.foot__list-left-element GALLERY
-						li.foot__list-left-element ~
-						li.foot__list-left-element CULTURE
-					.foot__logo Gustoso
+						a.foot__list-left-element(href='https://ya.ru')
+							li OUR MENU
+						li.foot__list-left-element.foot__list-element_none ~
+						a.foot__list-left-element(href='https://ya.ru')
+							li GALLERY
+						li.foot__list-left-element.foot__list-element_none ~
+						a.foot__list-left-element(href='https://ya.ru')
+							li CULTURE
+					a.foot__logo(href='https://ya.ru') Gustoso
 					ul.foot__list-right
-						li.foot__list-right-element EVENTS
-						li.foot__list-right-element ~
-						li.foot__list-right-element CATERING
-						li.foot__list-right-element ~
-						li.foot__list-right-element VISIT US
+						a.foot__list-left-element(href='https://ya.ru')
+							li EVENTS
+						li.foot__list-right-element.foot__list-element_none ~
+						a.foot__list-left-element(href='https://ya.ru')
+							li CATERING
+						li.foot__list-right-element.foot__list-element_none ~
+						a.foot__list-left-element(href='https://ya.ru')
+							li VISIT US
 								

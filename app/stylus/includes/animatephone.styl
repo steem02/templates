@@ -19,7 +19,7 @@
 
 @media only screen and (min-width: 376px) and (max-width: 414px)
 	.js__slide .tastes__photo.js__img_right
-       transform translateX(414px) scale(.8) rotate(30deg)
+        transform translateX(414px) scale(.8) rotate(30deg)
 	.js__slide .tastes__photo.js__img_left
         transform translateX(-414px) scale(.8) rotate(-30deg)
 
@@ -29,9 +29,25 @@
 .js__sandwich_none
     opacity 0
 .sandwich__icontitle.js__sandwich__title_left
-    transform translateX(-300px) scale(0)
+    transform translateX(-100%) scale(0)
 .sandwich__icontext.js__sandwich__text_right
     transform translateX(100%) scale(0)
 .sandwich__transition
     transition all 1.5s cubic-bezier(0.34, 0.08, 0.35, 1.04)
-// cubic-bezier(1, -0.23, 0, 1.62)
+//pancakes
+.js__pancakes_right
+    transform translateX(100%) scale(0)
+    opacity 0
+.js__pancakes_left
+    transform translateX(-100%) scale(0)
+    opacity 0
+#next_button.next_button
+    transform translateX(20px) scale(.5)
+// menu fixed
+
+.header__navi.js__navi_show
+    transform scale(1)
+.header__navi.js__navi_max
+    transition all .4s cubic-bezier(0.4, 0, 0.41, 1.56)
+.header__navi.js__navi_min
+    transition all .2s cubic-bezier(0.21, 0.63, 0.63, 0.75)
