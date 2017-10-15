@@ -55,9 +55,9 @@
   opacity: 0;
 }
 .sandwich__icontitle.js__sandwich__title_left {
-  -webkit-transform: translateX(-300px) scale(0);
-      -ms-transform: translateX(-300px) scale(0);
-          transform: translateX(-300px) scale(0);
+  -webkit-transform: translateX(-100%) scale(0);
+      -ms-transform: translateX(-100%) scale(0);
+          transform: translateX(-100%) scale(0);
 }
 .sandwich__icontext.js__sandwich__text_right {
   -webkit-transform: translateX(100%) scale(0);
@@ -67,6 +67,23 @@
 .sandwich__transition {
   -webkit-transition: all 1.5s cubic-bezier(0.34, 0.08, 0.35, 1.04);
   transition: all 1.5s cubic-bezier(0.34, 0.08, 0.35, 1.04);
+}
+.js__pancakes_right {
+  -webkit-transform: translateX(100%) scale(0);
+      -ms-transform: translateX(100%) scale(0);
+          transform: translateX(100%) scale(0);
+  opacity: 0;
+}
+.js__pancakes_left {
+  -webkit-transform: translateX(-100%) scale(0);
+      -ms-transform: translateX(-100%) scale(0);
+          transform: translateX(-100%) scale(0);
+  opacity: 0;
+}
+#next_button.next_button {
+  -webkit-transform: translateX(20px) scale(0.5);
+      -ms-transform: translateX(20px) scale(0.5);
+          transform: translateX(20px) scale(0.5);
 }
 .header__navi.js__navi_show {
   -webkit-transform: scale(1);
@@ -425,6 +442,7 @@ footer {
           transform: translateY(-50%);
   width: 100%;
   height: auto;
+  overflow: hidden;
   padding: 10% 0 0;
   text-align: center;
   -webkit-box-shadow: 3px -5px 43px -9px #bbb;
@@ -434,15 +452,38 @@ footer {
 .pancakes__description:before {
   display: none;
 }
+#next_button {
+  position: absolute;
+  top: 77%;
+  left: 75%;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 80px;
+  outline: none;
+  outline-style: none;
+  letter-spacing: -2px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#next_button:focus {
+  outline: none;
+  background: transparent;
+}
 .pancakes__name {
   font-size: 30px;
   letter-spacing: 1px;
   text-align: center;
+  -webkit-transition: all 1s cubic-bezier(0.34, 0.08, 0.35, 1.04);
+  transition: all 1s cubic-bezier(0.34, 0.08, 0.35, 1.04);
 }
 .pancakes__subtitle {
   font-size: 16px;
   letter-spacing: 1px;
   margin-bottom: 10%;
+  -webkit-transition: all 1s cubic-bezier(0.34, 0.08, 0.35, 1.04);
+  transition: all 1s cubic-bezier(0.34, 0.08, 0.35, 1.04);
 }
 .pancakes__text {
   display: inline-block;
@@ -450,10 +491,14 @@ footer {
   line-height: 1.5em;
   text-align: justify;
   font-size: 16px;
+  -webkit-transition: all 1s cubic-bezier(0.34, 0.08, 0.35, 1.04);
+  transition: all 1s cubic-bezier(0.34, 0.08, 0.35, 1.04);
 }
 .pancakes__rating {
   float: right;
   margin: 15% 3%;
+  -webkit-transition: all 1s cubic-bezier(0.34, 0.08, 0.35, 1.04);
+  transition: all 1s cubic-bezier(0.34, 0.08, 0.35, 1.04);
 }
 .pancakes__star {
   width: 18px;
@@ -476,6 +521,8 @@ footer {
 .pancakes__icon {
   width: 100%;
   height: 100%;
+  -webkit-transition: all 1s cubic-bezier(0.34, 0.08, 0.35, 1.04);
+  transition: all 1s cubic-bezier(0.34, 0.08, 0.35, 1.04);
 }
 .pancakes__slider img:nth-child(2) {
   margin: 0;
@@ -490,6 +537,8 @@ footer {
   -webkit-box-shadow: none;
           box-shadow: none;
   background: none;
+  -webkit-transition: all 1s cubic-bezier(0.34, 0.08, 0.35, 1.04);
+  transition: all 1s cubic-bezier(0.34, 0.08, 0.35, 1.04);
 }
 .pancakes__ready {
   line-height: 1em;

@@ -2,13 +2,22 @@ if (window.matchMedia) {
     var mediaPhone = window.matchMedia('only screen and (max-width: 480px)');
     var img = document.getElementsByClassName('js__tastes-photo');
     var container = document.getElementsByClassName('js__slide-contain')[0];
-    var pancakesIcon = document.getElementsByClassName('pancakes__icon');
     var sandwichIcon = document.getElementsByClassName('sandwich__icon');
     var sandwichIconTitle = document.getElementsByClassName('sandwich__icontitle');
     var sandwichIconText = document.getElementsByClassName('sandwich__icontext');
     var sandwichTimeout;
     var naviButton = document.getElementsByClassName('navi__button')[0];
     var headerNavi = document.getElementsByClassName('header__navi')[0];
+    // pancakes
+    var pancakesName = document.getElementsByClassName('pancakes__name')[0];
+    var pancakesSubtitle = document.getElementsByClassName('pancakes__subtitle')[0];
+    var pancakesText = document.getElementsByClassName('pancakes__text')[0];
+    var pancakesRating = document.getElementsByClassName('pancakes__rating')[0];
+    var pancakesStar = document.getElementsByClassName('pancakes__star');
+    var pancakesMinutes = document.getElementsByClassName('pancakes__minutes')[0];
+    var pancakesDigits = document.getElementsByClassName('pancakes__digits')[0];
+    var pancakesIcon = document.getElementsByClassName('pancakes__icon');
+    var pancakesDescription = document.querySelector('.pancakes__description');
     activePhone480(mediaPhone);
     mediaPhone.addListener(activePhone480);
     
@@ -20,7 +29,7 @@ if (window.matchMedia) {
                 this.picture = img;
                 this.container = container;
                 this._LENGTH = this.picture.length;
-                this._COUNT = 1;
+                this._COUNT = 2;
                 this.media = media || false;
             };
             SliderPhone.prototype.getIndexPictures = function (num) {
@@ -122,7 +131,6 @@ if (window.matchMedia) {
                     };
                 
                 };
-                this.begin();
                 this.container.addEventListener('touchstart', start, false);
                 this.container.addEventListener('touchend', end, false);
                 if (!document.ontouchstart || !document.ontouchend) {
@@ -164,22 +172,112 @@ if (window.matchMedia) {
                         }, getTimeTransition());
                         window.removeEventListener('scroll', eventScroll);
                     };
-    
                 };
                 window.addEventListener('scroll', eventScroll);
+                if (media) {
+                    media.addListener(function () {
+                        window.removeEventListener('scroll', eventScroll);
+                    })
+                };
             };
             var sld = new SliderPhone(img, container, mediaPhone);
+            sld.begin();
             sld.scrollVisible();
             sld.touchMove();
             
             // pancakes        
-            
             function setClassIcon(image) {
                 for (var i = 1; i < pancakesIcon.length; i++) {
                     pancakesIcon[i].classList.add('js__pancakes__icon_none');
                 };
             };
             setClassIcon(pancakesIcon);
+            
+            function getXmlHttp() {
+                var xmlhttp;
+                try {
+                    xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+                } catch (e) {
+                    try {
+                        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                    } catch (E) {
+                        xmlhttp = false;
+                    }
+                }
+                if (!xmlhttp && typeof XMLHttpRequest != 'undefined') {
+                    xmlhttp = new XMLHttpRequest();
+                }
+                return xmlhttp;
+            }
+            var xmlhttp, objJson;
+            xmlhttp = getXmlHttp();
+            xmlhttp.open('GET', '/app/json/object.json', true);
+            xmlhttp.send(null);
+            xmlhttp.onreadystatechange = function() {
+                var state = 1;
+                if (xmlhttp.readyState != 4) return;
+                if (xmlhttp.status != 200) {
+                    alert(xmlhttp.status + ': ' + xmlhttp.statusText);
+                } else {
+                    objJson = JSON.parse(xmlhttp.responseText).pancakes;
+                    function flightContent() {
+                        pancakesName.classList.add('js__pancakes_right');
+                        pancakesText.classList.add('js__pancakes_right');
+                        pancakesRating.classList.add('js__pancakes_right');
+                        pancakesSubtitle.classList.add('js__pancakes_left');
+                        pancakesMinutes.classList.add('js__pancakes_left');
+                        pancakesIcon[0].classList.add('js__pancakes_left');
+                        setTimeout(function () {
+                            changesContent();
+                            pancakesName.classList.remove('js__pancakes_right');
+                            pancakesText.classList.remove('js__pancakes_right');
+                            pancakesRating.classList.remove('js__pancakes_right');
+                            pancakesSubtitle.classList.remove('js__pancakes_left');
+                            pancakesMinutes.classList.remove('js__pancakes_left');
+                            pancakesIcon[0].classList.remove('js__pancakes_left');
+                        }, 1000);
+                    };
+                    function changesContent () {
+                        var obj = objJson[state];
+                        pancakesName.innerHTML = obj.name;
+                        pancakesSubtitle.innerHTML = obj.subtitle;
+                        pancakesText.innerHTML = obj.text;
+                        pancakesDigits.innerHTML = obj.minutes;
+                        pancakesIcon[0].src = 'img/widget/'+obj.img+'.jpg';
+                        for (var i = 0; i < obj.rating; i++) {
+                            pancakesStar[i].classList.remove('pancakes__star_none');
+                        };
+                        for (var j = obj.rating; j < pancakesStar.length; j++) {
+                            pancakesStar[j].classList.add('pancakes__star_none');
+                        };
+                        state++
+                        if (state == objJson.length) state = 0;
+                    };
+                    var nextButton = document.createElement('div');
+                    var simbol = String.fromCharCode('187');
+                    nextButton.textContent = String.fromCharCode('187')+String.fromCharCode('187');
+                    nextButton.id = 'next_button';
+                    pancakesDescription.appendChild(nextButton);
+                    nextButton.addEventListener('touchstart', change);
+                    function change(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        nextButton.className = 'next_button';
+                        flightContent();
+                        setTimeout(function () {
+                            nextButton.className = '';
+                        }, 300)
+                    };
+                    if (media) { 
+                        media.addListener(function () {
+                            if (!media.matches) {
+                                nextButton.removeEventListener('touchstart', change);
+                                nextButton.remove();
+                            };
+                        });
+                    };
+                };
+            };
             
             // sandwich
             
@@ -342,7 +440,6 @@ if (window.matchMedia) {
 
                         clearTimeout(timer);
                         timer = setTimeout(function () {
-                            button.style.transition = 'all 1.2s cubic-bezier(.54,.94,.84,1.23)';
                             button.style.transform = '';
                             button.style.opacity = '';
                             setTimeout(function () {
@@ -351,6 +448,11 @@ if (window.matchMedia) {
                             button.style.background = '';
                             state = true;
                         }, 1000);
+                    };
+                    if (media) {
+                        media.addListener(function () {
+                            window.removeEventListener('scroll', hideButton);
+                        })
                     };
                 };
             };

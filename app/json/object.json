@@ -1,0 +1,27 @@
+{
+    "pancakes": [{
+            "name": "Tasty pancakes",
+            "subtitle": "SEASON FAVOURITE",
+            "text": "Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus.",
+            "rating": "4",
+            "minutes": "40",
+            "img": "3"
+        },
+        {
+            "name": "Sweet cake",
+            "subtitle": "LOREM IPSUM",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing amet elit. Aspernatur, sapien officia. Harum voluptatem molestias, sapien iste blanditiis assumenda!",
+            "rating": "2",
+            "minutes": "35",
+            "img": "2"
+        },
+        {
+            "name": "Ipsum dolor",
+            "subtitle": "CONSECTETUR ELIT",
+            "text": "Adipisicing volupta elit. Harum voluptatem molestias, molestiae, iste blanditiis assumenda!tempus. Donec vitae sapien ut libero venenatis faucibus",
+            "rating": "1",
+            "minutes": "30",
+            "img": "1"
+        }
+        ]
+}
