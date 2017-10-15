@@ -211,7 +211,7 @@ if (window.matchMedia) {
             }
             var xmlhttp, objJson;
             xmlhttp = getXmlHttp();
-            xmlhttp.open('GET', '/dist/json/object.json', true);
+            xmlhttp.open('GET', 'https://steem02.github.io/dist/json/object.json', true);
             xmlhttp.send(null);
             xmlhttp.onreadystatechange = function() {
                 var state = 1;
