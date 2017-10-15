@@ -212,7 +212,7 @@ if (window.matchMedia) {
             var xmlhttp, objJson;
             xmlhttp = getXmlHttp();
             xmlhttp.open('GET', '/app/json/object.json', true);
-            xmlhttp.send(null);
+            xmlhttp.send();
             xmlhttp.onreadystatechange = function() {
                 var state = 1;
                 if (xmlhttp.readyState != 4) return;
