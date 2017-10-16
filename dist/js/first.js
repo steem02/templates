@@ -211,13 +211,13 @@ if (window.matchMedia) {
             }
             var xmlhttp, objJson;
             xmlhttp = getXmlHttp();
-            xmlhttp.open('GET', '/app/json/object.json', true);
+            xmlhttp.open('GET', '/json/object.json', true);
             xmlhttp.send(null);
             xmlhttp.onreadystatechange = function() {
                 var state = 1;
                 if (xmlhttp.readyState != 4) return;
                 if (xmlhttp.status != 200) {
-                    alert(xmlhttp.status + ': ' + xmlhttp.statusText);
+                    console.log(xmlhttp.status + ': ' + xmlhttp.statusText);
                 } else {
                     objJson = JSON.parse(xmlhttp.responseText).pancakes;
                     function flightContent() {
@@ -257,6 +257,7 @@ if (window.matchMedia) {
                     var simbol = String.fromCharCode('187');
                     nextButton.textContent = String.fromCharCode('187')+String.fromCharCode('187');
                     nextButton.id = 'next_button';
+                    nextButton.style.opacity = '.8';
                     pancakesDescription.appendChild(nextButton);
                     nextButton.addEventListener('touchstart', change);
                     function change(e) {
@@ -266,13 +267,13 @@ if (window.matchMedia) {
                         flightContent();
                         setTimeout(function () {
                             nextButton.className = '';
-                        }, 300)
+                        }, 800)
                     };
-                    if (media) { 
-                        media.addListener(function () {
-                            if (!media.matches) {
-                                nextButton.removeEventListener('touchstart', change);
-                                nextButton.remove();
+                    if (mediaPhone) { 
+                            mediaPhone.addListener(function () {
+                                if (!media.matches) {
+                                    nextButton.removeEventListener('touchstart', change);
+                                    nextButton.remove();
                             };
                         });
                     };
@@ -417,7 +418,9 @@ if (window.matchMedia) {
                                 button.removeEventListener('touchstart', downButtonAnimate);
                                 button.removeEventListener('touchend', upButtonAnimate);
                                 backgroundElem.removeEventListener('touchstart', hideTouchBackground);
-                                document.body.lastElementChild.remove();
+                                if (backgroundElem) {
+                                    backgroundElem.remove();
+                                };
                             };
                         });
                     };
