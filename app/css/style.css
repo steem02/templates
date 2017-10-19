@@ -58,6 +58,8 @@ html {
   margin: 0 20px;
   font-size: 10px;
   font-weight: bold;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
   color: #f3f2f1;
 }
 .header__link:link,
@@ -68,9 +70,11 @@ html {
   float: right;
   width: 95px;
   height: 70px;
+  margin-right: 170px;
   line-height: 70px;
   text-align: center;
-  margin-right: 170px;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .header__icon {
   display: inline-block;
@@ -427,7 +431,7 @@ html {
 }
 .pancakes__text {
   width: 398px;
-  font: 10px Proxima;
+  font: 12px Proxima;
   line-height: 2em;
   letter-spacing: 2px;
   font-weight: 600;
@@ -670,7 +674,7 @@ html {
 .book__onetext {
   width: 335px;
   margin: 0 auto 55px;
-  font: 10px Proxima;
+  font: 12px Proxima;
   font-weight: 900;
   line-height: 2em;
   letter-spacing: 2px;
@@ -740,7 +744,7 @@ html {
 .book__twotext {
   width: 335px;
   margin: 0 auto 55px;
-  font: 10px Proxima;
+  font: 12px Proxima;
   font-weight: 900;
   line-height: 2em;
   letter-spacing: 2px;
@@ -810,7 +814,7 @@ html {
 .book__threetext {
   width: 335px;
   margin: 0 auto 55px;
-  font: 10px Proxima;
+  font: 12px Proxima;
   font-weight: 900;
   line-height: 2em;
   letter-spacing: 2px;
