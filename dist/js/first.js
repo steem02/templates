@@ -1,26 +1,26 @@
-if (window.matchMedia) {
+var img = document.getElementsByClassName('js__tastes-photo');
+var container = document.getElementsByClassName('js__slide-contain')[0];
+var sandwichIcon = document.getElementsByClassName('sandwich__icon');
+var sandwichIconTitle = document.getElementsByClassName('sandwich__icontitle');
+var sandwichIconText = document.getElementsByClassName('sandwich__icontext');
+var sandwichButton = document.getElementsByClassName('sandwich__button')[0];
+var headerNavi = document.getElementsByClassName('header__navi')[0];
+var pancakesName = document.getElementsByClassName('pancakes__name')[0];
+var pancakesSubtitle = document.getElementsByClassName('pancakes__subtitle')[0];
+var pancakesText = document.getElementsByClassName('pancakes__text')[0];
+var pancakesRating = document.getElementsByClassName('pancakes__rating')[0];
+var pancakesStar = document.getElementsByClassName('pancakes__star');
+var pancakesMinutes = document.getElementsByClassName('pancakes__minutes')[0];
+var pancakesDigits = document.getElementsByClassName('pancakes__digits')[0];
+var pancakesIcon = document.getElementsByClassName('pancakes__icon');
+var pancakesDescription = document.querySelector('.pancakes__description');
+(function () {
+    if (window.matchMedia) {
     var mediaPhone = window.matchMedia('only screen and (max-width: 480px)');
-    var img = document.getElementsByClassName('js__tastes-photo');
-    var container = document.getElementsByClassName('js__slide-contain')[0];
-    var sandwichIcon = document.getElementsByClassName('sandwich__icon');
-    var sandwichIconTitle = document.getElementsByClassName('sandwich__icontitle');
-    var sandwichIconText = document.getElementsByClassName('sandwich__icontext');
     var sandwichTimeout;
     var naviButton = document.getElementsByClassName('navi__button')[0];
-    var headerNavi = document.getElementsByClassName('header__navi')[0];
-    // pancakes
-    var pancakesName = document.getElementsByClassName('pancakes__name')[0];
-    var pancakesSubtitle = document.getElementsByClassName('pancakes__subtitle')[0];
-    var pancakesText = document.getElementsByClassName('pancakes__text')[0];
-    var pancakesRating = document.getElementsByClassName('pancakes__rating')[0];
-    var pancakesStar = document.getElementsByClassName('pancakes__star');
-    var pancakesMinutes = document.getElementsByClassName('pancakes__minutes')[0];
-    var pancakesDigits = document.getElementsByClassName('pancakes__digits')[0];
-    var pancakesIcon = document.getElementsByClassName('pancakes__icon');
-    var pancakesDescription = document.querySelector('.pancakes__description');
     activePhone480(mediaPhone);
     mediaPhone.addListener(activePhone480);
-    
     function activePhone480(media) {
     
         if (mediaPhone.matches) {
@@ -192,7 +192,6 @@ if (window.matchMedia) {
                 };
             };
             setClassIcon(pancakesIcon);
-            
             function getXmlHttp() {
                 var xmlhttp;
                 try {
@@ -211,7 +210,7 @@ if (window.matchMedia) {
             }
             var xmlhttp, objJson;
             xmlhttp = getXmlHttp();
-            xmlhttp.open('GET', '/json/object.json', true);
+            xmlhttp.open('GET', 'json/object.json', true);
             xmlhttp.send(null);
             xmlhttp.onreadystatechange = function() {
                 var state = 1;
@@ -279,9 +278,7 @@ if (window.matchMedia) {
                     };
                 };
             };
-            
             // sandwich
-            
             function startSandwichAnimate() {
                 var count = 0;
                 for (var i = 1; i < sandwichIcon.length; i++) {
@@ -310,10 +307,30 @@ if (window.matchMedia) {
                 
                 setTimeout(thisFunc, 4000);
             };
+            function tapStartFullRecipe(e) {
+                e.preventDefault();
+                this.style.boxShadow = 'none';
+                
+            };
+            function tapEndFullRecipe(e) {
+                var self = this;
+                this.style.boxShadow = '';
+                setTimeout(function () {
+                    document.location.href = self.parentElement.href;
+                }, 40);
+            };
+            sandwichButton.addEventListener('touchstart', tapStartFullRecipe);
+            sandwichButton.addEventListener('touchend', tapEndFullRecipe);
+            if (mediaPhone) { 
+                mediaPhone.addListener(function () {
+                    if (!media.matches) {
+                        sandwichButton.removeEventListener('touchstart', tapStartFullRecipe);
+                        sandwichButton.removeEventListener('touchend', tapEndFullRecipe);
+                    };
+                });
+            };
             startSandwichAnimate();
-            
             // menu
-            
             function Menu(outer, inner, media) {
                 this.button = outer;
                 this.list = inner;
@@ -435,9 +452,8 @@ if (window.matchMedia) {
 
                         if (state) {
                             button.style.transition = 'all .8s cubic-bezier(.54,.94,.84,1.23)';
-                            button.style.transform = 'translate(10%,-10%) scale(0)';
+                            button.style.transform = 'translate(10%,-10%)';
                             button.style.opacity = '0';
-                            button.style.background = '#2225FF';
                             state = false;
                         };
 
@@ -486,3 +502,4 @@ if (window.matchMedia) {
     
     };
 };
+})();
