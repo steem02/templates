@@ -114,11 +114,15 @@ gulp.task('img', function() {
 });
 
 gulp.task('build', function() {
-
     return gulp.src('app/fonts/**/*') // Переносим шрифты в продакшен
-    .pipe(newer('dist/fonts'))
-    .pipe(gulp.dest('dist/fonts'))
+        .pipe(newer('dist/fonts'))
+        .pipe(gulp.dest('dist/fonts')),
+        gulp.src('app/json/**/*')
+        .pipe(newer('dist/json'))
+        .pipe(gulp.dest('dist/json'))
 });
+
+
 
 gulp.task('clean', function() {
     return del('dist'); // Удаляем папку dist перед сборкой

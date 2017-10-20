@@ -7,14 +7,16 @@
     <link rel="shortcut icon" href="img/favicon.ico"/>
     <link rel="stylesheet" href="css/reset.min.css"/>
     <link rel="stylesheet" href="css/style.min.css"/>
+    <link rel="stylesheet" href="css/pchover.min.css" media="only screen and (min-width: 769px)"/>
     <link rel="stylesheet" href="css/480css.min.css" media="only screen and (max-width: 480px)"/>
-    <link rel="stylesheet" href="css/768css.min.css"/>
+    <link rel="stylesheet" href="css/768css.min.css" media="only screen and (min-width: 481px) and (max-width: 768px)"/>
     <script defer="defer" src="js/first.js"></script>
+    <script defer="defer" src="js/pc.js"></script>
   </head>
   <body>
     <div class="container1">
       <div class="header">
-        <div class="header__wrapper"><a class="header__logo" href="https://ya.ru"></a>
+        <div class="header__wrapper"><a class="header__logo" href="https://google.ru"></a>
           <div class="header__social">
             <div class="header__icon"><a class="header__icon-link header__icon-link_twitter" href="https://twitter.com"></a><a class="header__icon-link header__icon-link_facebook" href="https://facebook.com"></a><a class="header__icon-link header__icon-link_instagram" href="https://instagram.com"></a></div>
           </div>
@@ -67,7 +69,10 @@
               <p class="pancakes__subtitle">SEASON FAVOURITE</p>
               <p class="pancakes__text">Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus.</p>
               <div class="pancakes__rating"><span class="pancakes__star"> </span><span class="pancakes__star"></span><span class="pancakes__star"></span><span class="pancakes__star"></span><span class="pancakes__star pancakes__star_none"></span></div>
-              <div class="pancakes__slider"><img class="pancakes__icon" src="img/widget/3.jpg" alt=""/><img class="pancakes__icon" src="img/widget/2.jpg" alt=""/><img class="pancakes__icon" src="img/widget/1.jpg" alt=""/></div>
+              <div class="pancakes__slider">
+                <div class="pancakes__slider-before"></div><img class="pancakes__icon" src="img/widget/3.jpg" alt=""/><img class="pancakes__icon" src="img/widget/2.jpg" alt=""/><img class="pancakes__icon" src="img/widget/1.jpg" alt=""/>
+                <div class="pancakes__slider-after"></div>
+              </div>
             </div>
           </div>
           <div class="pancakes__minutes">
@@ -83,13 +88,13 @@
         <div class="breakfast__price">
           <div class="breakfast__inline">
             <p class="breakfast__caption">Breakfast</p>
-            <p class="breakfast__subtitle">7AM BREAKFAST? WE'RE OPEN!</p><a href="https://ya.ru" title="full breakfast">
+            <p class="breakfast__subtitle">7AM BREAKFAST? WE'RE OPEN!</p><a class="breakfast__switch" href="https://ya.ru" title="full breakfast" data="0">
               <p class="breakfast__one">Full breakfast</p>
               <p class="breakfast__onetitle">Duis ut tortor, et risus, vulputate pretium</p>
-              <p class="breakfast__onemoney">$12.49</p></a><a href="https://ya.ru" title="Toast &amp;#38; Jam">
+              <p class="breakfast__onemoney">$12.49</p></a><a class="breakfast__switch" href="https://ya.ru" title="Toast &amp;#38; Jam" data="1">
               <p class="breakfast__two">Toast &#38; Jam</p>
               <p class="breakfast__twotitle">Suspendisse, tempus, nterdum</p>
-              <p class="breakfast__twomoney">$4.90</p></a><a href="https://ya.ru" title="Muffins">
+              <p class="breakfast__twomoney">$4.90</p></a><a class="breakfast__switch" href="https://ya.ru" title="Muffins" data="2">
               <p class="breakfast__three">Muffins</p>
               <p class="breakfast__threetitle">Fusce eget dui sodales est</p>
               <p class="breakfast__threemoney">$3.95</p></a>
@@ -97,26 +102,23 @@
         </div>
         <div class="book">
           <div class="book__wrapper">
-            <div class="book__one">
+            <div class="book__one js__book">
               <p class="book__oneyear"><span class="book__oneleft">EST.</span><span class="book__oneright">1893</span></p>
               <div class="book__oneicon"></div>
-              <p class="book__onecaption">Your morning Escape with Flair</p>
-              <p class="book__onetext">Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo.</p>
-              <div class="book__button">READ</div>
+              <p class="book__onecaption">Full Breakfast Escape with Flair</p>
+              <p class="book__onetext">Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo.</p><a class="book__button" href="https://ya.ru">READ</a>
             </div>
-            <div class="book__two">
+            <div class="book__two js__book">
               <p class="book__twoyear"><span class="book__twoleft">EST.</span><span class="book__tworight">1893</span></p>
               <div class="book__twoicon"></div>
-              <p class="book__twocaption">Your morning Escape with Flair</p>
-              <p class="book__twotext">Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo.</p>
-              <div class="book__button">READ</div>
+              <p class="book__twocaption">Toast & Jam Escape with Flair</p>
+              <p class="book__twotext"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, quae.</p><a class="book__button" href="https://ya.ru">READ</a>
             </div>
-            <div class="book__three">
+            <div class="book__three js__book">
               <p class="book__threeyear"><span class="book__threeleft">EST.</span><span class="book__threeright">1893</span></p>
               <div class="book__threeicon"></div>
-              <p class="book__threecaption">Your morning Escape with Flair</p>
-              <p class="book__threetext">Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo.</p>
-              <div class="book__button">READ</div>
+              <p class="book__threecaption">Muffins Escape with Flair</p>
+              <p class="book__threetext">Sapien ut libero onec vitae lorem ipsum dolor sit amet, consectetur adipisicing elit.</p><a class="book__button" href="https://ya.ru">READ</a>
             </div>
           </div>
         </div>
@@ -175,7 +177,7 @@
         <div class="foot__wrapper">
           <ul class="foot__list-left"><a class="foot__list-left-element" href="https://ya.ru">
               <li>OUR MENU</li></a>
-            <li class="foot__list-left-element foot__list-element_none">~</li><a class="foot__list-left-element" href="https://ya.ru">
+            <li class="foot__list-left-element foot__list-element_none">~</li><a class="foot__list-left-element" href="https://yandex.ru">
               <li>GALLERY</li></a>
             <li class="foot__list-left-element foot__list-element_none">~</li><a class="foot__list-left-element" href="https://ya.ru">
               <li>CULTURE</li></a>

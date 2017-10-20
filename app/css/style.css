@@ -55,7 +55,11 @@ html {
 }
 .header__link {
   display: inline-block;
-  margin: 0 30px;
+  margin: 0 20px;
+  font-size: 10px;
+  font-weight: bold;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
   color: #f3f2f1;
 }
 .header__link:link,
@@ -66,9 +70,9 @@ html {
   float: right;
   width: 95px;
   height: 70px;
+  margin-right: 170px;
   line-height: 70px;
   text-align: center;
-  margin-right: 170px;
 }
 .header__icon {
   display: inline-block;
@@ -83,13 +87,19 @@ html {
   height: 20px;
 }
 .header__icon-link_twitter {
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
   background: url("../img/logo.png") 0 0 no-repeat;
 }
 .header__icon-link_facebook {
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
   margin: 0 22px;
   background: url("../img/logo.png") 50% 0 no-repeat;
 }
 .header__icon-link_instagram {
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
   background: url("../img/logo.png") 100% 0 no-repeat;
 }
 .hero {
@@ -150,6 +160,8 @@ html {
   font-weight: 900;
   text-shadow: 0.5px 0.9px 0px #3d3029;
   line-height: 50px;
+  -webkit-transition: all 0.9s ease-out;
+  transition: all 0.9s ease-out;
 }
 .hero__button_phone {
   display: none;
@@ -339,6 +351,8 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 50%;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 .tastes__photo:after {
   content: '';
@@ -384,6 +398,8 @@ html {
           box-shadow: 3px -5px 43px -9px #bbb;
   background: url("../img/widget/4.jpg") no-repeat -430px -70px;
   background-size: 110%;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 .pancakes__description {
   position: absolute;
@@ -396,25 +412,12 @@ html {
   background: url("../img/widget/vektor.jpg") no-repeat 100% 100%;
   background-size: 200%;
 }
-.pancakes__description:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 50px;
-  height: 50px;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-border-radius: 50px;
-          border-radius: 50px;
-  cursor: pointer;
-  background: #fff url("../img/widget/menu.png") no-repeat 50% 50%;
-}
 .pancakes__name {
   font-size: 50px;
   letter-spacing: 2px;
   font-weight: 900;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 .pancakes__subtitle {
   margin-bottom: 60px;
@@ -422,17 +425,23 @@ html {
   letter-spacing: 0.2em;
   font-weight: 900;
   color: #a47d5e;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 .pancakes__text {
   width: 398px;
-  font: 10px Proxima;
+  font: 12px Proxima;
   line-height: 2em;
   letter-spacing: 2px;
   font-weight: 600;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 .pancakes__rating {
   display: inline-block;
   margin: 40px 0 55px -2px;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 .pancakes__star {
   display: inline-block;
@@ -440,7 +449,6 @@ html {
   height: 14px;
   font-size: 0;
   margin-right: 14px;
-  cursor: pointer;
   background: url("../img/widget/starok.png");
 }
 .pancakes__star_none {
@@ -452,29 +460,35 @@ html {
   height: 90px;
   text-align: center;
 }
-.pancakes__slider:before {
-  content: '';
+.pancakes__slider-before {
   position: absolute;
   top: 50%;
   left: 0;
   width: 32px;
   height: 32px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
   cursor: pointer;
   background: url("../img/widget/leftarrow.png");
 }
-.pancakes__slider:after {
-  content: '';
+.pancakes__slider-after {
   position: absolute;
   top: 50%;
   right: 0;
   width: 32px;
   height: 32px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
   cursor: pointer;
   background: url("../img/widget/rightarrow.png");
 }
@@ -483,8 +497,10 @@ html {
   height: 90px;
   -webkit-border-radius: 90px;
           border-radius: 90px;
+  -webkit-transition: all 2s ease-out;
+  transition: all 2s ease-out;
 }
-.pancakes__slider img:nth-child(2) {
+.pancakes__slider img:nth-child(3) {
   margin: 0 30px;
 }
 .pancakes__minutes {
@@ -529,6 +545,11 @@ html {
   height: 760px;
   line-height: 760px;
   text-align: center;
+}
+.breakfast__switch {
+  display: block;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 .breakfast__price {
   display: inline-block;
@@ -668,12 +689,13 @@ html {
 .book__onetext {
   width: 335px;
   margin: 0 auto 55px;
-  font: 10px Proxima;
+  font: 12px Proxima;
   font-weight: 900;
   line-height: 2em;
   letter-spacing: 2px;
 }
 .book__button {
+  display: inline-block;
   width: 190px;
   height: 50px;
   margin: 0 auto;
@@ -738,7 +760,7 @@ html {
 .book__twotext {
   width: 335px;
   margin: 0 auto 55px;
-  font: 10px Proxima;
+  font: 12px Proxima;
   font-weight: 900;
   line-height: 2em;
   letter-spacing: 2px;
@@ -808,7 +830,7 @@ html {
 .book__threetext {
   width: 335px;
   margin: 0 auto 55px;
-  font: 10px Proxima;
+  font: 12px Proxima;
   font-weight: 900;
   line-height: 2em;
   letter-spacing: 2px;
