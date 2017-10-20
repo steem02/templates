@@ -518,8 +518,8 @@ footer {
   -webkit-border-radius: 30%;
           border-radius: 30%;
 }
-.pancakes__slider:before,
-.pancakes__slider:after {
+.pancakes__slider-before,
+.pancakes__slider-after {
   display: none;
 }
 .pancakes__icon {

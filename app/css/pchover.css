@@ -3,5 +3,41 @@
   color: #dfc691;
   text-shadow: -1px 0 1px #fff, 0 -1px 1px #fff, 0 1px 1px #fff, 1px 0 1px #fff, 0 0 8px #fff, 0 0 8px #fff, 0 0 8px #fff, 2px 2px 3px #000;
 }
+.hero__button:hover {
+  background: rgba(1,1,1,0.5);
+}
+.pancakes__slider-before:hover,
+.pancakes__slider-after:hover {
+  -webkit-box-shadow: 0 0 10px 1px #999;
+          box-shadow: 0 0 10px 1px #999;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transform-origin: 50% 400%;
+      -ms-transform-origin: 50% 400%;
+          transform-origin: 50% 400%;
+}
+.pancakes__slider::-moz-selection,
+.pancakes__icon::-moz-selection {
+  background: transparent;
+}
+.pancakes__slider::selection,
+.pancakes__icon::selection {
+  background: transparent;
+}
+.pancakes-hide-content {
+  opacity: 0;
+}
+.breakfast__switch:hover {
+  -webkit-box-shadow: 0px 0px 20px #aaa;
+          box-shadow: 0px 0px 20px #aaa;
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.js__book {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
 
 /*# sourceMappingURL=pchover.css.map */

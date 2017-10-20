@@ -10,8 +10,8 @@ html(lang="ru")
 		link(rel="stylesheet", href="css/pchover.min.css" media="only screen and (min-width: 769px)")
 		link(rel="stylesheet", href="css/480css.min.css" media="only screen and (max-width: 480px)")
 		link(rel="stylesheet", href="css/768css.min.css" media="only screen and (min-width: 481px) and (max-width: 768px)")
-		script(defer src="js/pc.js")
 		script(defer src="js/first.js")
+		script(defer src="js/pc.js")
 	body
 		//- Меню
 		.container1
@@ -88,9 +88,11 @@ html(lang="ru")
 								span.pancakes__star
 								span.pancakes__star.pancakes__star_none
 							.pancakes__slider
+								.pancakes__slider-before
 								img.pancakes__icon(src="img/widget/3.jpg", alt="")
 								img.pancakes__icon(src="img/widget/2.jpg", alt="")
 								img.pancakes__icon(src="img/widget/1.jpg", alt="")
+								.pancakes__slider-after
 					.pancakes__minutes
 						p.pancakes__ready READY IN
 						p.pancakes__digits 40
@@ -102,44 +104,44 @@ html(lang="ru")
 					.breakfast__inline
 						p.breakfast__caption Breakfast
 						p.breakfast__subtitle 7AM BREAKFAST? WE'RE OPEN!
-						a(href="https://ya.ru" title="full breakfast")
+						a(href="https://ya.ru" title="full breakfast" data="0").breakfast__switch
 							p.breakfast__one Full breakfast
 							p.breakfast__onetitle Duis ut tortor, et risus, vulputate pretium
 							p.breakfast__onemoney $12.49
-						a(href="https://ya.ru" title="Toast &#38; Jam")
+						a(href="https://ya.ru" title="Toast &#38; Jam" data="1").breakfast__switch
 							p.breakfast__two Toast &#38; Jam
 							p.breakfast__twotitle Suspendisse, tempus, nterdum
 							p.breakfast__twomoney $4.90
-						a(href="https://ya.ru" title="Muffins")
+						a(href="https://ya.ru" title="Muffins" data="2").breakfast__switch
 							p.breakfast__three Muffins
 							p.breakfast__threetitle Fusce eget dui sodales est
 							p.breakfast__threemoney $3.95
 				.book
 					.book__wrapper
-						.book__one
+						.book__one.js__book
 							p.book__oneyear
 								span.book__oneleft EST.
 								span.book__oneright 1893
 							.book__oneicon
-							p.book__onecaption Your morning Escape with Flair
+							p.book__onecaption Full Breakfast Escape with Flair
 							p.book__onetext Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo.
-							.book__button READ
-						.book__two
+							a(href="https://ya.ru").book__button READ
+						.book__two.js__book
 							p.book__twoyear
 								span.book__twoleft EST.
 								span.book__tworight 1893
 							.book__twoicon
-							p.book__twocaption Your morning Escape with Flair
-							p.book__twotext Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo.
-							.book__button READ
-						.book__three
+							p.book__twocaption Toast & Jam Escape with Flair
+							p.book__twotext  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, quae.
+							a(href="https://ya.ru").book__button READ
+						.book__three.js__book
 							p.book__threeyear
 								span.book__threeleft EST.
 								span.book__threeright 1893
 							.book__threeicon
-							p.book__threecaption Your morning Escape with Flair
-							p.book__threetext Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo.
-							.book__button READ
+							p.book__threecaption Muffins Escape with Flair
+							p.book__threetext Sapien ut libero onec vitae lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							a(href="https://ya.ru").book__button READ
 		//- Страница 5
 		.container5
 			.sandwich
